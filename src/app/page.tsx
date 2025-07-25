@@ -1,12 +1,14 @@
 "use client";
 import styles from "./page.module.css";
-import Intro from "@/components/Intro/Intro";
+import Whoami from "@/components/Whoami/Whoami";
+import About from "@/components/About/About";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Intro />
+        <Whoami />
+        <About />
       </main>
     </div>
   );
