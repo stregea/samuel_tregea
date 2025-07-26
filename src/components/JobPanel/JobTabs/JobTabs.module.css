@@ -1,19 +1,22 @@
+/** Overrides for the MUI Tabs CSS **/
 .verticalTabs {
-  min-width: 200px;
-  border-right: 1px solid var(--divider, #e0e0e0);
-  align-items: flex-start;
+    min-width: 300px; /** bare minimum tab width */
+    align-items: flex-start;
+    text-align: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.verticalTabs :global(.MuiTabs-indicator) {
+    background-color: var(--react-light-blue) !important;
 }
 
 .tab {
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  color: var(--slate);
-  font-weight: normal;
+    align-items: flex-start !important;
+    justify-content: flex-start;
+    color: var(--slate) !important;
+    font-weight: normal;
 }
 
-/* Use :global to target MUI's selected class */
 .tab:global(.Mui-selected) {
-  color: var(--react-light-blue);
-  font-weight: bold;
+    color: var(--react-light-blue) !important;
 }

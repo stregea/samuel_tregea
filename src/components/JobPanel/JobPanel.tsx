@@ -1,11 +1,26 @@
-import Box from "@mui/material/Box";
-import VerticalTabs from "./JobTabs/JobTabs";
-import JobDescription from "./JobDescription/JobDescription";
 import { useState } from "react";
+import Box from "@mui/material/Box";
+import JobTabs from "@/components/JobPanel/JobTabs/JobTabs";
+import JobDescription from "@/components/JobPanel/JobDescription/JobDescription";
+import FadeIn from "@/components/utils/FadeIn/FadeIn";
 
+
+
+/**
+ * Renders the "Experience" section of the website, displaying my professional experience
+ * in a tabbed interface.
+ * Reference: https://mui.com/material-ui/react-tabs/#vertical-tabs
+ * 
+ * @component
+ * @example
+ * <Experience />
+ *
+ * @returns {JSX.Element} The rendered Experience section.
+ */
 export default function JobPanel() {
+    const [selectedTab, setSelectedTab] = useState(0);
 
-        const career = [
+    const career = [
         {
             company: "Mindex",
             location: "Rochester, NY",
@@ -55,26 +70,22 @@ export default function JobPanel() {
         },
     ];
 
-    const [selectedTab, setSelectedTab] = useState(0);
-
     return (
         <Box sx={{ display: "flex", minHeight: 300 }}>
-            <VerticalTabs career={career} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+            <JobTabs career={career} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
             {career.map((job, idx) => (
-                <JobDescription value={selectedTab} index={idx} key={job.company + job.duration}>
-                <h3>
-                    {job.title} @ {job.company}
-                </h3>
-                <p>
-                    <strong>{job.location}</strong> &mdash; {job.duration}
-                </p>
-                <ul>
-                    {job.description.map((desc: string, i: number) => (
-                    <li key={i}>{desc}</li>
-                    ))}
-                </ul>
-                </JobDescription>
+            <JobDescription selectedTabIndex={selectedTab} currentTabIndex={idx} key={job.company + job.duration}>
+                <FadeIn>
+                    <h3>{job.title} - {job.company}</h3>
+                    <p>{job.location} | {job.duration}</p>
+                    <ul>
+                        {job.description.map((desc, i) => (
+                            <li key={i}>{desc}</li>
+                        ))}
+                    </ul>
+                </FadeIn>
+            </JobDescription>
             ))}
         </Box>
     );
-}
+};
