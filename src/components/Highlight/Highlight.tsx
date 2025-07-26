@@ -2,12 +2,14 @@ import React from "react";
 import styles from "./Highlight.module.css";
 
 /**
- * Highlights text by wrapping it in a styled span.
- * 
- * @param {React.ReactNode} children - The content to highlight.
- * 
- * Usage:
- * <Highlight>Important Text</Highlight>
+ * Renders highlighted text by wrapping children in a <span> with bold styling and a custom color.
+ *
+ * @component
+ * @example
+ * <Highlight>Important text</Highlight>
+ *
+ * @param {React.ReactNode} props.children - The text or elements to highlight.
+ * @returns {JSX.Element} The rendered Highlight component.
  */
 export default function Highlight({ children }: { children: React.ReactNode }) {    
     return (
