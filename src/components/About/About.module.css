@@ -1,21 +1,12 @@
-.about {
-    margin: 0 2rem 0 2rem;
-    max-width: 1000px;
-    min-height: 50vh;
-    text-align: left;
-}
-
 .body {
     font-size: 20px;
     line-height: 1.6;
 }
 
-
 /* Add some space between paragraphs and other elements */
-.about >*, .body > * {
+.body > * {
     margin-bottom: 1rem;
 }
-
 
 /* Display the skills in a grid layout */
 .skills {
