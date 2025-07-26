@@ -8,7 +8,7 @@
 
   align-items: center;
   justify-items: center;
-  min-height: 100svh;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +28,7 @@
     align-items: center;
     text-align: center;
     margin: auto;
-    max-width: 100vw;
+    max-width: 90vw;
     padding-top: 250px;
     min-height: 100vh;
     overflow-y: hidden;

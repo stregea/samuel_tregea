@@ -1,7 +1,51 @@
 .about {
-    font-size: 2.5rem;
-    margin: auto;
-    padding: 2rem;
-    max-width: 80vw;
-    text-align: center;
+    margin: 0 2rem 0 2rem;
+    max-width: 1000px;
+    min-height: 50vh;
+    text-align: left;
+}
+
+.heading {
+    color: var(--slate);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.body {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* Add some space between paragraphs and other elements */
+.about >*, .body > * {
+    margin-bottom: 1rem;
+}
+
+/* .body strong {
+    color: var(--react-light-blue)
+} */
+
+/* Display the skills in a grid layout */
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+
+.skillsList {
+    list-style-type: none;
+}
+
+.skillsList li::before {
+    content: "›";
+    color: var(--react-light-blue);
+    padding: 0.5rem 1rem 0 1rem;
+}
+
+.namePronunciation {
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--slate);
 }

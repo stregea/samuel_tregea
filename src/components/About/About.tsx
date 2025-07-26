@@ -1,6 +1,6 @@
 import styles from "./About.module.css";
 import FadeIn from "../FadeIn/FadeIn";
-
+import Highlight from "../Highlight/Highlight";
 
 /**
  * Renders the About section of the application, introducing myself and highlighting
@@ -52,35 +52,56 @@ export default function About() {
   };
 
   const intro = (
-    <p className="about-intro">
-      Hi, I’m <strong>Sam Tregea</strong>, a {getMyCurrentAge()} software engineer passionate about building scalable, user-focused solutions
-      across the tech stack. With professional experience in both front-end and back-end development, I specialize in
-      creating responsive applications and architecting robust RESTful microservices.
+<p>
+  Hi, I’m <Highlight>Sam Tregea</Highlight> <span className={styles.namePronunciation}>(tree-gay)</span>, a {getMyCurrentAge()} year old software engineer passionate about building scalable, user-focused solutions
+  across the tech stack. With professional experience in both front-end and back-end development, I specialize in
+  creating responsive applications and architecting robust RESTful microservices.
+</p>
+  );
+
+  const hobbies = (
+    <p>
+      Outside of work, I enjoy training <Highlight>Brazilian Jiu Jitsu</Highlight>, playing <Highlight>Soccer</Highlight>, and spending time with my friends and family.
     </p>
   );
 
   const languages = ["Java", "Python", "JavaScript", "TypeScript", "C#", "C/C++"];
   const frameworks = ["Spring Boot", "React", "Angular", "Django", "Flask", ".NET MVC"];
-  const tools = ["Docker", "Kubernetes", "Git", "AWS", "Azure", "OracleDB", "MongoDB"];
 
   return (
     <FadeIn>
       <section className={styles.about} id="aboutMe">
-        <h2 className="heading">
-            {"// About me"}
-        </h2>
-        <div>
+        <div className={styles.heading}>
+            {"// about me"}
+        </div>
+        <div className={styles.body}>
           {intro}
-          <br />
           <p>
-            Here are some of the languages, frameworks, and tools I work with:
+            {"Here are some of the languages, frameworks, and tools I work with:"}
           </p>
-          <br />
-          <ul className={styles.skillsList}>
-            <li><strong>Languages:</strong> {languages.join(", ")}</li>
-            <li><strong>Frameworks:</strong> {frameworks.join(", ")}</li>
-            <li><strong>Tools:</strong> {tools.join(", ")}</li>
-          </ul>
+            <div className={styles.skills}>
+              <div>
+                {"Languages:"} 
+                <FadeIn delay={0.2}>
+                  <ul className={styles.skillsList}>
+                    {languages.map((language) => (
+                      <li key={language}>{language}</li>
+                    ))}
+                  </ul>
+                </FadeIn>
+              </div>
+              <div>
+                {"Frameworks:"} 
+                <FadeIn delay={0.4}>
+                  <ul className={styles.skillsList}>
+                    {frameworks.map((framework) => (
+                      <li key={framework}>{framework}</li>
+                    ))}
+                  </ul>
+                </FadeIn>
+              </div>
+            </div>
+          {hobbies}
         </div>
       </section>
     </FadeIn>
