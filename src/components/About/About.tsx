@@ -1,4 +1,5 @@
 import styles from "./About.module.css";
+import Section from "@/components/utils/Section/Section";
 import Header from "@/components/utils/Header/Header";
 import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import Highlight from "@/components/utils/Highlight/Highlight";
@@ -70,39 +71,37 @@ export default function About() {
   const frameworks = ["Spring Boot", "React", "Angular", "Django", "Flask", ".NET MVC"];
 
   return (
-    <FadeIn>
-      <section className={styles.about} id="aboutMe">
-        <Header>{"// about me"}</Header>
-        <div className={styles.body}>
-          {intro}
-          <p>
-            {"Here are some of the languages, frameworks, and tools I work with:"}
-          </p>
-            <div className={styles.skills}>
-              <div>
-                {"Languages:"} 
-                <FadeIn delay={0.2}>
-                  <ul className={styles.skillsList}>
-                    {languages.map((language) => (
-                      <li key={language}>{language}</li>
-                    ))}
-                  </ul>
-                </FadeIn>
-              </div>
-              <div>
-                {"Frameworks:"} 
-                <FadeIn delay={0.4}>
-                  <ul className={styles.skillsList}>
-                    {frameworks.map((framework) => (
-                      <li key={framework}>{framework}</li>
-                    ))}
-                  </ul>
-                </FadeIn>
-              </div>
-            </div>
-          {hobbies}
+    <Section id="aboutMe">
+      <Header>{"// about me"}</Header>
+      <div className={styles.body}>
+        {intro}
+        <p>
+          {"Here are some of the languages, frameworks, and tools I work with:"}
+        </p>
+        <div className={styles.skills}>
+          <div>
+            {"Languages:"}
+            <FadeIn delay={0.2}>
+              <ul className={styles.skillsList}>
+                {languages.map((language) => (
+                  <li key={language}>{language}</li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
+          <div>
+            {"Frameworks:"}
+            <FadeIn delay={0.4}>
+              <ul className={styles.skillsList}>
+                {frameworks.map((framework) => (
+                  <li key={framework}>{framework}</li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
         </div>
-      </section>
-    </FadeIn>
+        {hobbies}
+      </div>
+    </Section>
   );
 }
