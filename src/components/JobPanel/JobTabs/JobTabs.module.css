@@ -1,0 +1,19 @@
+.verticalTabs {
+  min-width: 200px;
+  border-right: 1px solid var(--divider, #e0e0e0);
+  align-items: flex-start;
+}
+
+.tab {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  color: var(--slate);
+  font-weight: normal;
+}
+
+/* Use :global to target MUI's selected class */
+.tab:global(.Mui-selected) {
+  color: var(--react-light-blue);
+  font-weight: bold;
+}
