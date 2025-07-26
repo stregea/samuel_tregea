@@ -1,6 +1,6 @@
 import styles from "./About.module.css";
-import FadeIn from "../FadeIn/FadeIn";
-import Highlight from "../Highlight/Highlight";
+import FadeIn from "@/components/FadeIn/FadeIn";
+import Highlight from "@/components/Highlight/Highlight";
 
 /**
  * Renders the About section of the application, introducing myself and highlighting

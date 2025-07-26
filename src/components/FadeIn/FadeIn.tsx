@@ -1,5 +1,5 @@
-import React, {useRef, useEffect, useState} from 'react';
-import styles from './FadeIn.module.css';
+import React, {useRef, useEffect, useState} from "react";
+import styles from "./FadeIn.module.css";
 
 /**
  * Wraps children in a div that fades in when it enters the viewport.
