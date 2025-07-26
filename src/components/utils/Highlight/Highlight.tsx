@@ -17,4 +17,4 @@ export default function Highlight({ children }: { children: React.ReactNode }) {
             {children}
         </span>
     );
-}
+};

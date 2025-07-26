@@ -22,4 +22,4 @@ export default function Section({ children, id }: { children: React.ReactNode, i
             </section>
         </FadeIn>
     );
-}
+};
