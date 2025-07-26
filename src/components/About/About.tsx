@@ -1,4 +1,5 @@
 import styles from "./About.module.css";
+import Header from "@/components/utils/Header/Header";
 import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import Highlight from "@/components/utils/Highlight/Highlight";
 
@@ -52,11 +53,11 @@ export default function About() {
   };
 
   const intro = (
-<p>
-  Hi, I’m <Highlight>Sam Tregea</Highlight> <span className={styles.namePronunciation}>(tree-gay)</span>, a {getMyCurrentAge()} year old software engineer passionate about building scalable, user-focused solutions
-  across the tech stack. With professional experience in both front-end and back-end development, I specialize in
-  creating responsive applications and architecting robust RESTful microservices.
-</p>
+    <p>
+      Hi, I’m <Highlight>Sam Tregea</Highlight> <span className={styles.namePronunciation}>(tree-gay)</span>, a {getMyCurrentAge()} year old software engineer passionate about building scalable, user-focused solutions
+      across the tech stack. With professional experience in both front-end and back-end development, I specialize in
+      creating responsive applications and architecting robust RESTful microservices.
+    </p>
   );
 
   const hobbies = (
@@ -71,9 +72,7 @@ export default function About() {
   return (
     <FadeIn>
       <section className={styles.about} id="aboutMe">
-        <div className={styles.heading}>
-            {"// about me"}
-        </div>
+        <Header>{"// about me"}</Header>
         <div className={styles.body}>
           {intro}
           <p>
