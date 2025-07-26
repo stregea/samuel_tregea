@@ -1,6 +1,6 @@
 import styles from "./Whoami.module.css";
 import { Typewriter } from "react-simple-typewriter";
-import FadeIn from "@/components/FadeIn/FadeIn";
+import FadeIn from "@/components/utils/FadeIn/FadeIn";
 
 /**
  * Renders the "Whoami" section of the website, introducing the user with a typewriter effect
