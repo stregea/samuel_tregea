@@ -41,7 +41,12 @@ export default function JobDescription(props: JobDescriptionProps) {
               <h3> {job.title}</h3>
             </div>
             <div className={styles.jobDetails}>
-              <p>{job.location} | {job.duration}</p>
+              <div>
+                <p>{job.duration}</p>
+              </div>
+              <div>
+                <p>{job.location}</p>
+              </div>
             </div>
             <FadeIn>
                 <ul className={styles.descriptionList}>

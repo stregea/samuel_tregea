@@ -1,6 +1,7 @@
 /** Overrides for the MUI Tabs CSS **/
 .verticalTabs {
     min-width: 312px; /** bare minimum tab width */
+    min-height: 465px;
     align-items: flex-start;
     text-align: left;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -15,10 +16,24 @@
     justify-content: flex-start;
     color: var(--slate) !important;
     font-weight: normal;
-        font-family: Rockwell !important;
-
+    font-family: Rockwell !important;
 }
 
 .tab:global(.Mui-selected) {
     color: var(--react-light-blue) !important;
+}
+
+/** Override the scroll buttons while in mobile view **/
+@media (max-width: 600px) {
+  .verticalTabs :global(.MuiTabs-scrollButtons) {
+    height: 48px;
+    color: var(--react-light-blue) !important;
+  }
+}
+
+/** Remove the right border while in mobile view **/
+@media (max-width: 600px) {
+  .verticalTabs {
+    border-right: none !important;
+  }
 }

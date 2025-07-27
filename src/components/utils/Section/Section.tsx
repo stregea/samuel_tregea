@@ -16,10 +16,10 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
  */
 export default function Section({ children, id }: { children: React.ReactNode, id: string }) {    
     return (
-        <FadeIn>
-            <section className={styles.section} id={id}>
+        <section className={styles.section} id={id}>
+            <FadeIn>
                 {children}
-            </section>
-        </FadeIn>
+            </FadeIn>
+        </section>
     );
 };

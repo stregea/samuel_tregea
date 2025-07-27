@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import JobTabs from "@/components/JobPanel/JobTabs/JobTabs";
 import JobDescription from "@/components/JobPanel/JobDescription/JobDescription";
 import careerData from "@/data/career.json";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 /**
  * Renders the "Experience" section of the website, displaying my professional experience
@@ -17,9 +18,16 @@ import careerData from "@/data/career.json";
  */
 export default function JobPanel() {
     const [selectedTab, setSelectedTab] = useState(0);
+    const isMobile = useMediaQuery("(max-width: 600px)");
 
     return (
-        <Box sx={{ display: "flex", minHeight: 300 }}>
+        <Box sx={
+            { 
+                display: "flex", 
+                minHeight: 300,
+                flexDirection: isMobile ? "column" : "row",
+            }
+        } >
             <JobTabs career={careerData.career} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
             <JobDescription
                 selectedTabIndex={selectedTab}

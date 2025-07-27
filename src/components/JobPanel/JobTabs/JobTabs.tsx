@@ -1,6 +1,7 @@
 import styles from "./JobTabs.module.css";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 /**
  * Renders a vertical tab list for displaying career/job entries.
@@ -30,6 +31,8 @@ export default function JobTabs({
     setSelectedTab: (tab: number) => void;
 }) {
     
+    const isMobile = useMediaQuery("(max-width: 600px)");
+
     // Handle tab change event.
     const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
         setSelectedTab(newValue);
@@ -45,8 +48,13 @@ export default function JobTabs({
 
     return (
         <Tabs
-            orientation="vertical"
+            sx={{
+                maxWidth: isMobile ? "calc(100vw - 64px)" : 320
+            }}
+            orientation={isMobile ? "horizontal" : "vertical"}
             variant="scrollable"
+            scrollButtons={true}
+            allowScrollButtonsMobile
             value={selectedTab}
             onChange={handleChange}
             className={styles.verticalTabs}
