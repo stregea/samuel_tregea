@@ -1,0 +1,25 @@
+.description {
+    padding-left: 1.5rem;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.descriptionList {
+    list-style-type: none;
+}
+
+.description li {
+    list-style: none;
+    padding: 1rem 0 0 1rem;
+    color: var(--slate);
+    font-size: 15px;
+    position: relative;
+}
+
+/* todo: setup similar to about module */
+.description li::before {
+    content: "›";
+    color: var(--react-light-blue);
+    position: absolute;
+    left: 0;
+}
