@@ -10,16 +10,28 @@
 
 .description li {
     list-style: none;
-    padding: 1rem 0 0 1rem;
-    color: var(--slate);
+    padding: 1rem 0 0 2rem;
     font-size: 15px;
     position: relative;
 }
 
-/* todo: setup similar to about module */
+
 .description li::before {
     content: "›";
     color: var(--react-light-blue);
     position: absolute;
-    left: 0;
+    left: 1rem;
+}
+
+.jobTitle{
+    font-size: 24px;
+    color: var(--react-light-blue);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.jobDetails {
+    font-size: 16px;
+    color: var(--slate);
+    margin-bottom: 1rem;
 }

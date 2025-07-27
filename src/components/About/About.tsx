@@ -73,7 +73,7 @@ export default function About() {
   return (
     <Section id="aboutMe">
       <Header>{"// about me"}</Header>
-      <div className={styles.body}>
+      <div className={styles.about}>
         {intro}
         <p>
           {"Here are some of the languages, frameworks, and tools I work with:"}
@@ -91,7 +91,7 @@ export default function About() {
           </div>
           <div>
             {"Frameworks:"}
-            <FadeIn delay={0.4}>
+            <FadeIn delay={0.5}>
               <ul className={styles.skillsList}>
                 {frameworks.map((framework) => (
                   <li key={framework}>{framework}</li>

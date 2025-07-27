@@ -3,6 +3,7 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import Header from "@/components/utils/Header/Header";
 
 import JobPanel from "../JobPanel/JobPanel";
+import Section from "../utils/Section/Section";
 
 
 /**
@@ -16,11 +17,11 @@ import JobPanel from "../JobPanel/JobPanel";
  */
 export default function Experience() {
   return (
-    <FadeIn delay={0.5}>
+    <Section id="experience">
+        <Header>{"// experience"}</Header>
         <div className={styles.experience}>
-            <Header>{"// experience"}</Header>
             <JobPanel />
         </div>
-    </FadeIn>
+    </Section>
   );
 };

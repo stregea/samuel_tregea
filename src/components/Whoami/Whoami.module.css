@@ -1,16 +1,22 @@
 .whoami {
-    margin: 5rem 1rem 1rem 1rem;
+    margin: 0 1rem 10rem 1rem;
+    padding: 1rem;
     min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; 
 }
 
 .heading {
-    font-size: 5rem;
+    font-size: 80px;
 }
 
 .description {
-    font-size: 1.5rem;
+    font-size: 30px;
     color: var(--slate);
-    margin-left: -3rem;
+    /* margin-left: -3rem; */
 }
 
 .typeWriter {

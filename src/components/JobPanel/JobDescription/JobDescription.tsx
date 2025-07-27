@@ -37,8 +37,12 @@ export default function JobDescription(props: JobDescriptionProps) {
     >
       {currentTabIndex === selectedTabIndex && job && (
         <Box className={styles.description}>
-            <h3>{job.title} - {job.company}</h3>
-            <p>{job.location} | {job.duration}</p>
+            <div className={styles.jobTitle}> 
+              <h3> {job.title}</h3>
+            </div>
+            <div className={styles.jobDetails}>
+              <p>{job.location} | {job.duration}</p>
+            </div>
             <FadeIn>
                 <ul className={styles.descriptionList}>
                 {job.description.map((desc, i) => (

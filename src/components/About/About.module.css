@@ -1,10 +1,10 @@
-.body {
+.about {
     font-size: 15px;
     line-height: 1.6;
 }
 
 /* Add some space between paragraphs and other elements */
-.body > * {
+.about > * {
     margin-bottom: 1rem;
 }
 
