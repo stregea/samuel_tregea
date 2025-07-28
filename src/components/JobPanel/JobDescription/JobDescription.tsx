@@ -44,13 +44,13 @@ export default function JobDescription(props: JobDescriptionProps) {
               <p>{job.duration}</p>
               <p>{job.location}</p>
             </div>
-                <ul className={styles.descriptionList}>
-                  {job.description.map((desc, i) => (
-                    <FadeIn key={`job-desc-fade-${i}`} delay={i * 0.2}>
-                      <li key={`job-desc-${i}`}>{desc}</li>
-                    </FadeIn>
-                  ))}
-                </ul>
+            <ul className={styles.descriptionList}>
+              {job.description.map((desc, i) => (
+                <FadeIn key={`job-desc-fade-${i}`} delay={i * 0.2}>
+                  <li key={`job-desc-${i}`}>{desc}</li>
+                </FadeIn>
+              ))}
+            </ul>
         </Box>
       )}
     </div>
