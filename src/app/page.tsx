@@ -8,11 +8,15 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        {/* todo: navbar */}
         <div className={styles.content}>
             <Whoami />
             <About />
             <Experience />
+            {/* todo: projects */}
+            {/* todo: copyright */}
           </div>
+          {/* todo: footer */}
       </main>
     </div>
   );
