@@ -1,12 +1,16 @@
 .whoami {
     margin: 0 1rem 10rem 1rem;
-    padding: 1rem;
+    padding: 0 1rem;
     min-height: 50vh;
+}
+
+.content {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
-    text-align: center; 
+    text-align: center !important; 
+    padding: 1rem;
 }
 
 .heading {
@@ -16,10 +20,19 @@
 .description {
     font-size: 30px;
     color: var(--slate);
-    /* margin-left: -3rem; */
 }
 
 .typeWriter {
     color: var(--react-light-blue);
     font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .heading {
+        font-size: 45px;
+    }
+    
+    .description {
+        font-size: 20px;
+    }
 }

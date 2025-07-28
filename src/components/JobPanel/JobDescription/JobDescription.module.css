@@ -28,7 +28,7 @@
 }
 
 .jobDetails {
-    font-size: 16px;
+    font-size: 16px !important;
     color: var(--slate);
     margin-bottom: 1rem;
     display: flex;
@@ -40,5 +40,8 @@
 @media screen and (max-width: 600px) {
     .description {
         padding-left: 0;
+    }
+    .jobTitle{
+        padding-top: 1rem;
     }
 }

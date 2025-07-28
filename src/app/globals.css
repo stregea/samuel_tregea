@@ -13,11 +13,15 @@ body {
   overflow-x: hidden;
 }
 
+/** Prevent browser adjusting font size on mobile **/
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Rockwell;
-  /* font-family: Monaco, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
