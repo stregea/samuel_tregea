@@ -2,17 +2,27 @@ import React, {useRef, useEffect, useState} from "react";
 import styles from "./FadeIn.module.css";
 
 /**
+ * Property types for the FadeIn component.
+ */
+interface FadeInProps {
+  children: React.ReactNode;
+  delay?: number;
+  fadeInOnView?: boolean;
+}
+
+/**
  * Wraps children in a div that fades in when it enters the viewport.
  * 
  * @param {React.ReactNode} children - The content to animate in.
  * @param {number} [delay=0] - Optional delay (in seconds) before the fade-in animation starts.
- * 
+ * @param {boolean} [fadeInOnView=true] - Optional parameter that can enable/disable the fade-in effect based on visibility.
+ *
  * Usage:
  * <FadeIn delay={0.5}>
  *   <YourContent />
  * </FadeIn>
  */
-export default function FadeIn({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
+export default function FadeIn({ children, delay = 0, fadeInOnView = true }: FadeInProps) {
     // Reference to the DOM element we want to observe.
     const ref = useRef<HTMLDivElement>(null);
 
@@ -20,6 +30,12 @@ export default function FadeIn({ children, delay = 0 }: { children: React.ReactN
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        // If fadeInOnView is false, set the visibilility immediately.
+        if (!fadeInOnView) {
+            setIsVisible(true);
+            return;
+        }
+
         // Create an IntersectionObserver to track when the section enters the viewport.
         const observer = new IntersectionObserver(
             
@@ -48,7 +64,7 @@ export default function FadeIn({ children, delay = 0 }: { children: React.ReactN
         };
     }, []); // Empty dependency array ensures this runs once on mount.
 
-    // Accepts delay in seconds (e.g., 0.5, 1.2)
+    // Accepts delay in seconds (e.g., 0.5, 1.2, etc.)
     const style = {
         transitionDelay: `${delay}s`,
     };
