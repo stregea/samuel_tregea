@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Samuel Tregea",
@@ -16,6 +17,7 @@ export default function RootLayout({ children,}: Readonly<{ children: React.Reac
       <body>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
