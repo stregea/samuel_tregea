@@ -24,6 +24,7 @@
 .description {
     font-size: 30px;
     color: var(--slate);
+    text-align: center;
 }
 
 .typeWriter {

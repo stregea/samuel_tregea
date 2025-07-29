@@ -1,7 +1,7 @@
 import styles from "./Whoami.module.css";
 import { Typewriter } from "react-simple-typewriter";
-import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import { Alert } from "@mui/material";
+import Section from "../utils/Section/Section";
 
 /**
  * Renders the "Whoami" section of the website, introducing the user with a typewriter effect
@@ -16,7 +16,7 @@ import { Alert } from "@mui/material";
 export default function Whoami() {
     const notice = "This website is currently under active construction.";
     const words = ["sam"];
-    const description = "im a software engineer based in rochester, ny where i focus on developing innovative solutions that have direct impact on real-world challenges.";
+    const description = "im a software engineer based in rochester, ny that is passionate about building clean, efficient, and scalable applications that deliver meaningful impact.";
 
     return (
         <section className={styles.whoami} id="whoami">
@@ -36,11 +36,11 @@ export default function Whoami() {
                         />
                     </span>
                 </div>
-                <FadeIn delay={1}>
+                <Section id="whoami-description" delay={1}>
                     <div className={styles.description}>
                         {description}
                     </div>
-                </FadeIn>
+                </Section>
             </div>
         </section>
   );
