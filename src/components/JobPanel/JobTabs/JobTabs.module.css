@@ -10,6 +10,7 @@
 
 .tabGroup :global(.MuiTabs-indicator) {
     background-color: var(--react-light-blue) !important;
+    /* testing how this works in PR */
 }
 
 .tab {
