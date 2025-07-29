@@ -16,7 +16,7 @@ import { Alert } from "@mui/material";
 export default function Whoami() {
     const notice = "This website is currently under active construction.";
     const words = ["sam"];
-    const description = "im a software engineer based in rochester, ny and am dedicated to developing innovative solutions that address real-world challenges.";
+    const description = "im a software engineer based in rochester, ny where i develop innovative solutions that address real-world challenges.";
     
     return (
         <section className={styles.whoami} id="whoami">
