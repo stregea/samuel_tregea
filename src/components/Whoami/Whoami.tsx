@@ -2,6 +2,7 @@ import styles from "./Whoami.module.css";
 import { Typewriter } from "react-simple-typewriter";
 import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import { Alert } from "@mui/material";
+
 /**
  * Renders the "Whoami" section of the website, introducing the user with a typewriter effect
  * cycling through different roles or titles. Includes a heading and a description that fades in.
@@ -14,7 +15,9 @@ import { Alert } from "@mui/material";
  */
 export default function Whoami() {
     const notice = "This website is currently under active construction.";
-
+    const words = ["sam"];
+    const description = "im a software engineer based in rochester, ny and am dedicated to developing innovative solutions that address real-world challenges.";
+    
     return (
         <section className={styles.whoami} id="whoami">
             <div className={styles.content}>
@@ -25,17 +28,17 @@ export default function Whoami() {
                     {"hi, im "}
                     <span className={styles.typeWriter}>
                         <Typewriter
-                            words={["an engineer", "a creator", "sam"]}
+                            words={words}
                             loop={1}
                             cursor={true}
                             cursorStyle="|"
-                            typeSpeed={100}
+                            typeSpeed={175}
                         />
                     </span>
                 </div>
-                <FadeIn delay={7}>
+                <FadeIn delay={1}>
                     <div className={styles.description}>
-                        {"I also like to build things with code."}
+                        {description}
                     </div>
                 </FadeIn>
             </div>
