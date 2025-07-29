@@ -48,16 +48,14 @@ export default function JobTabs({
 
     return (
         <Tabs
-            sx={{
-                maxWidth: isMobile ? "calc(100vw - 64px)" : 320
-            }}
             orientation={isMobile ? "horizontal" : "vertical"}
             variant="scrollable"
-            scrollButtons={true}
+            visibleScrollbar
+            scrollButtons={false}
             allowScrollButtonsMobile
             value={selectedTab}
             onChange={handleChange}
-            className={styles.verticalTabs}
+            className={styles.tabGroup}
         >
             {career.map((job, idx) => (
                 <Tab
