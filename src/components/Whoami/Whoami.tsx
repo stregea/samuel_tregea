@@ -1,8 +1,7 @@
 import styles from "./Whoami.module.css";
 import { Typewriter } from "react-simple-typewriter";
 import FadeIn from "@/components/utils/FadeIn/FadeIn";
-import Section from "../utils/Section/Section";
-
+import { Alert } from "@mui/material";
 /**
  * Renders the "Whoami" section of the website, introducing the user with a typewriter effect
  * cycling through different roles or titles. Includes a heading and a description that fades in.
@@ -14,9 +13,14 @@ import Section from "../utils/Section/Section";
  * @returns {JSX.Element} The rendered Whoami section.
  */
 export default function Whoami() {
-    return (    
+    const notice = "This website is currently under active construction.";
+
+    return (
         <section className={styles.whoami} id="whoami">
             <div className={styles.content}>
+                <div className={styles.alert}>
+                    <Alert severity="warning">{notice}</Alert>
+                </div>
                 <div className={styles.heading}>
                     {"hi, im "}
                     <span className={styles.typeWriter}>
