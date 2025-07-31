@@ -16,7 +16,7 @@ import Section from "../utils/Section/Section";
 export default function Whoami() {
     const notice = "This website is currently under active construction.";
     const words = ["sam"];
-    const description = "im a software engineer based in rochester, ny that is passionate about building clean, efficient, and scalable applications that deliver meaningful impact.";
+    const description = "i'm a software engineer based in rochester, ny that is passionate about building clean, efficient, and scalable applications that deliver meaningful impact.";
 
     return (
         <section className={styles.whoami} id="whoami">
@@ -25,7 +25,7 @@ export default function Whoami() {
                     <Alert severity="warning">{notice}</Alert>
                 </div>
                 <div className={styles.heading}>
-                    {"hi, im "}
+                    {"hi, i'm "}
                     <span className={styles.typeWriter}>
                         <Typewriter
                             words={words}
