@@ -56,6 +56,7 @@ export default function JobTabs({
             value={selectedTab}
             onChange={handleChange}
             className={styles.tabGroup}
+            data-testid="jobTabs"
         >
             {career.map((job, idx) => (
                 <Tab
