@@ -1,12 +1,11 @@
-import { expect, test, vi } from 'vitest'
+import { expect, test } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import Whoami from '@/components/Whoami/Whoami';
-
+  
 /**
  * Test to ensure the Whoami component renders correctly.
  */
-test('renders Whoami heading', () => {
+test('Renders the Whoami component', () => {
   render(<Whoami />);
-  // Adjust the query below to match the actual heading/text in Whoami
-  expect(screen.getByTestId('whoami')).toBeDefined();
+  expect(screen.getByTestId("whoami")).toBeDefined();
 });
