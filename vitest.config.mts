@@ -6,6 +6,15 @@ export default defineConfig({
   plugins: [tsconfigPaths(), react()],
   test: {
     environment: 'jsdom',
+    coverage: {
+      provider: 'v8',
+      thresholds: {
+        lines: 90,
+        functions: 90,
+        // branches: 90,
+        // statements: 90,
+      },
+    },
     setupFiles: ['./vitest.setup.mts'],
   },
 })
