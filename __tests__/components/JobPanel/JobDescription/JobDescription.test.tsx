@@ -8,9 +8,9 @@ import JobDescription from '@/components/JobPanel/JobDescription/JobDescription'
 test('Renders the JobDescription component', () => {
     const job = {
         title: "Software Engineer",
-        company: "Tech Company",
-        location: "Remote",
-        duration: "January 2020 - Present",
+        company: "My Company",
+        location: "Rochester, NY",
+        duration: "Jan 2025 - Aug 2025",
         description: ["This is a job description."]
     };
     const selectedTabIndex = 0;
