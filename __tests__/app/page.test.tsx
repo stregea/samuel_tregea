@@ -2,6 +2,9 @@ import { test, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import Home from '@/app/page';
 
+/**
+ * Test to ensure the Home component renders correctly.
+ */
 test('Renders the Home component', () => {
   render(<Home />);
 
