@@ -8,6 +8,7 @@ import Header from "@/components/utils/Header/Header";
  * This suite tests the Header component, ensuring it renders correctly.
  */
 describe("Header", () => {
+    
     beforeEach(() => {
         render(<Header>{"Test Header"}</Header>);
     });
