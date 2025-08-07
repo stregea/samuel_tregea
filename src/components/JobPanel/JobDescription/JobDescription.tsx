@@ -26,12 +26,13 @@ export interface JobDescriptionProps {
  */
 export default function JobDescription(props: JobDescriptionProps) {
   const { selectedTabIndex, currentTabIndex, job, ...other } = props;
-
+  const id = `job-description-${currentTabIndex}`;
   return (
     <div
       role="tabpanel"
       hidden={currentTabIndex !== selectedTabIndex}
-      id={`vertical-tabpanel-${currentTabIndex}`}
+      id={id}
+      data-testid={id}
       aria-labelledby={`vertical-tab-${currentTabIndex}`}
       {...other}
     >

@@ -13,7 +13,7 @@ import styles from "./Header.module.css";
  */
 export default function Header({ children }: { children: React.ReactNode }) {    
     return (
-        <h2 className={styles.header}>
+        <h2 className={styles.header} data-testid="header">
             {children}
         </h2>
     );

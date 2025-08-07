@@ -1,6 +1,6 @@
 # Samuel Tregea – Personal Website
 
-This is the source code for [Samuel Tregea](https://samueltregea.com)'s personal website and portfolio, built with [Next.js](https://nextjs.org/), [React](https://react.dev/), and [TypeScript](https://www.typescriptlang.org/).
+This is the source code for [my personal website and portfolio](https://samueltregea.com), built with [Next.js](https://nextjs.org/), [React](https://react.dev/), and [TypeScript](https://www.typescriptlang.org/).
 
 ---
 

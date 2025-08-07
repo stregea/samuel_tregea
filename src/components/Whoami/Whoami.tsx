@@ -17,9 +17,9 @@ export default function Whoami() {
     const notice = "This website is currently under active construction.";
     const words = ["sam"];
     const description = "i'm a software engineer based in rochester, ny that is passionate about building clean, efficient, and scalable applications that deliver meaningful impact.";
-
+    const id = "whoami";
     return (
-        <section className={styles.whoami} id="whoami">
+        <section className={styles.whoami} id={id} data-testid={id}>
             <div className={styles.content}>
                 <div className={styles.alert}>
                     <Alert severity="warning">{notice}</Alert>

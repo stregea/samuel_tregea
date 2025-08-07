@@ -1,7 +1,5 @@
 import styles from "./Experience.module.css";
-import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import Header from "@/components/utils/Header/Header";
-
 import JobPanel from "../JobPanel/JobPanel";
 import Section from "../utils/Section/Section";
 

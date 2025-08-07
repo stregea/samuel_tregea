@@ -25,11 +25,12 @@ interface FadeInProps {
 export default function FadeIn({ children, delay = 0, fadeInOnView = true }: FadeInProps) {
     // Reference to the DOM element we want to observe.
     const ref = useRef<HTMLDivElement>(null);
-
     // State to track visibility.
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const currentRef = ref.current;
+
         // If fadeInOnView is false, set the visibilility immediately.
         if (!fadeInOnView) {
             setIsVisible(true);
@@ -50,19 +51,19 @@ export default function FadeIn({ children, delay = 0, fadeInOnView = true }: Fad
         );
 
         // Start observing the element if it exists.
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         // Cleanup the observer on component unmount.
         // This prevents memory leaks and ensures the observer is removed when the component is no longer in the DOM.
         // This is important for performance and to avoid unnecessary observations.
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
-    }, []); // Empty dependency array ensures this runs once on mount.
+    }, [fadeInOnView]); // Dependency array ensures the effect runs only once when the component mounts or when fadeInOnView changes.
 
     // Accepts delay in seconds (e.g., 0.5, 1.2, etc.)
     const style = {
@@ -74,6 +75,7 @@ export default function FadeIn({ children, delay = 0, fadeInOnView = true }: Fad
             ref={ref} 
             className={`${styles.fadeIn} ${isVisible ? styles.visible : styles.hidden}`}
             style={style}
+            data-testid="fadeIn"
         >
             {children}
         </div>

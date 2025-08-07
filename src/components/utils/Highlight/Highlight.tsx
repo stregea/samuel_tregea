@@ -13,7 +13,7 @@ import styles from "./Highlight.module.css";
  */
 export default function Highlight({ children }: { children: React.ReactNode }) {    
     return (
-        <span className={styles.highlight}>
+        <span className={styles.highlight} data-testid="highlight">
             {children}
         </span>
     );

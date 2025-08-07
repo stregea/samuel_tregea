@@ -37,14 +37,6 @@ export default function JobTabs({
     const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
         setSelectedTab(newValue);
     };
-    
-    // Generate properties for each tab, including ID and ARIA controls for accessibility.
-    const tabProperties = (index: number) => {
-        return {
-            id: `vertical-tab-${index}`,
-            "aria-controls": `vertical-tabpanel-${index}`,
-        };
-    };
 
     return (
         <Tabs
@@ -56,11 +48,14 @@ export default function JobTabs({
             value={selectedTab}
             onChange={handleChange}
             className={styles.tabGroup}
+            data-testid="jobTabs"
         >
             {career.map((job, idx) => (
                 <Tab
                     label={job.company}
-                    {...tabProperties(idx)}
+                    id={`tab-${idx}`}
+                    data-testid={`tab-${idx}`}
+                    aria-controls={`tab-${idx}`}
                     key={job.company + job.duration}
                     className={styles.tab}
                 />

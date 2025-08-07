@@ -19,7 +19,7 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
  */
 export default function Section({ children, id, delay = 0 }: { children: React.ReactNode, id: string, delay?: number }) {
     return (
-        <section className={styles.section} id={id}>
+        <section className={styles.section} id={id} data-testid={id}>
             <div className={styles.content}>
                 <FadeIn delay={delay}>
                     {children}
