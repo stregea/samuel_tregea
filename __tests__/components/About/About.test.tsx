@@ -1,12 +1,26 @@
-
-import { test, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import About from '@/components/About/About';
+import { describe, test, expect, beforeEach, afterEach } from "vitest";
+import { render, screen, cleanup } from "@testing-library/react";
+import About from "@/components/About/About";
 
 /**
- * Test to ensure the About component renders correctly.
+ * About Test Suite.
+ *
+ * This suite tests the About component, ensuring it renders correctly.
  */
-test('Renders the About component', () => {
-  render(<About />);
-  expect(screen.getByTestId("aboutMe")).toBeDefined();
+describe("About", () => {
+
+	beforeEach(() => {
+		render(<About />);
+	});
+
+	afterEach(() => {
+		cleanup();
+	});
+
+	/**
+	 * Test to ensure the About component renders correctly.
+	 */
+	test("Renders the About component", () => {
+		expect(screen.getByTestId("aboutMe")).toBeDefined();
+	});
 });

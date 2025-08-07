@@ -1,11 +1,26 @@
-import { expect, test } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import Whoami from '@/components/Whoami/Whoami';
-  
+import { describe, test, expect, beforeEach, afterEach } from "vitest";
+import { cleanup, render, screen } from "@testing-library/react";
+import Whoami from "@/components/Whoami/Whoami";
+	
 /**
- * Test to ensure the Whoami component renders correctly.
+ * Whoami Test Suite.
+ *
+ * This suite tests the Whoami component, ensuring it renders correctly.
  */
-test('Renders the Whoami component', () => {
-  render(<Whoami />);
-  expect(screen.getByTestId("whoami")).toBeDefined();
+describe("Whoami", () => {
+
+	beforeEach(() => {
+		render(<Whoami />);
+	});
+
+	afterEach(() => {
+		cleanup();
+	});
+
+	/**
+	 * Test to ensure the Whoami component renders correctly.
+	 */
+	test("Renders the Whoami component", () => {
+		expect(screen.getByTestId("whoami")).toBeDefined();
+	});
 });

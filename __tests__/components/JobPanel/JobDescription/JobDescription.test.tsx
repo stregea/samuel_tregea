@@ -1,21 +1,35 @@
-import { test, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import JobDescription from '@/components/JobPanel/JobDescription/JobDescription';
+import { describe, test, expect, beforeEach, afterEach } from "vitest";
+import { render, screen, cleanup } from "@testing-library/react";
+import JobDescription from "@/components/JobPanel/JobDescription/JobDescription";
 
 /**
- * Test to ensure the JobDescription component renders correctly.
+ * JobDescription Test Suite.
+ *
+ * This suite tests the JobDescription component, ensuring it renders correctly.
  */
-test('Renders the JobDescription component', () => {
-    const job = {
-        title: "Software Engineer",
-        company: "My Company",
-        location: "Rochester, NY",
-        duration: "Jan 2025 - Aug 2025",
-        description: ["This is a job description."]
-    };
-    const selectedTabIndex = 0;
-    const currentTabIndex = 0;
+describe("JobDescription", () => {
+	const job = {
+		title: "Software Engineer",
+		company: "My Company",
+		location: "Rochester, NY",
+		duration: "Jan 2025 - Aug 2025",
+		description: ["This is a job description."]
+	};
+	const selectedTabIndex = 0;
+	const currentTabIndex = 0;
 
-    render(<JobDescription selectedTabIndex={selectedTabIndex} currentTabIndex={currentTabIndex} job={job} />);
-    expect(screen.getByTestId(`job-description-${currentTabIndex}`)).toBeDefined();
+	beforeEach(() => {
+		render(<JobDescription selectedTabIndex={selectedTabIndex} currentTabIndex={currentTabIndex} job={job} />);
+	});
+
+	afterEach(() => {
+		cleanup();
+	});
+
+	/**
+	 * Test to verify the rendering of the JobDescription component.
+	 */
+	test("Renders the JobDescription component", () => {
+		expect(screen.getByTestId(`job-description-${currentTabIndex}`)).toBeDefined();
+	});
 });
