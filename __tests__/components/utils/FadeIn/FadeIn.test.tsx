@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, screen } from "@testing-library/react";
 import FadeIn from "@/components/utils/FadeIn/FadeIn";
 
 /**
@@ -32,19 +32,36 @@ describe("FadeIn", () => {
 	});
 
 	/**
+	 * Test to ensure FadeIn component renders correctly.
+	 */
+	test("the rendering of the FadeIn component.", () => {
+		render(
+			<FadeIn>
+				<div data-testid="testElement"/>
+			</FadeIn>
+		);
+
+		const element  = screen.getByTestId("testElement");
+
+		expect(element).toBeDefined();
+		expect(element.parentElement).toBeDefined();
+		expect(element.parentElement?.className).toContain("fadeIn");
+	});
+
+	/**
 	 * Test to ensure FadeIn component renders when it's within the viewport.
 	 */
 	test("the visibility of the FadeIn component when within view and unobserves.", () => {
 		const { getByTestId, unmount } = render(
 			<FadeIn>
-				<div data-testid="test-fade-element" />
+				<div data-testid="testElement" />
 			</FadeIn>
 		);
 
 		// Simulate the IntersectionObserver callback being called
-		const targetDiv = getByTestId("test-fade-element")
+		const element = getByTestId("testElement");
 		const callback = (window.IntersectionObserver as any).mock.calls[0][0];
-		const entry = { isIntersecting: true, target: targetDiv };
+		const entry = { isIntersecting: true, target: element };
 
 		// Call the callback with the entry        
 		callback([entry]);
