@@ -20,8 +20,8 @@ describe("Header", () => {
      * Test to verify the rendering of the Header component.
      */
     test("the rendering of the Header component", () => {
-        const header = screen.getByRole("heading", { level: 2 });
-        
+        const header = screen.getByTestId("header");
+
         expect(header).toBeDefined();
         expect(header.localName).toEqual("h2");
         expect(header.innerHTML).toEqual("Test Header");
