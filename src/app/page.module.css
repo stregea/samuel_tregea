@@ -1,11 +1,10 @@
 .page {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
-
 .main {
-    margin: auto;
-    max-width: 95vw;
-    padding-top: 250px;
-    overflow-y: hidden;
+	margin: auto;
+	max-width: 95vw;
+	padding-top: 250px;
+	overflow-y: hidden;
 }

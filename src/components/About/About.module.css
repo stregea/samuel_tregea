@@ -1,33 +1,33 @@
 .about {
-    font-size: 15px !important; /**fix font size for phones in**/
-    line-height: 1.6;
+	font-size: 15px !important; /**fix font size for phones in**/
+	line-height: 1.6;
 }
 
 /* Add some space between paragraphs and other elements */
 .about > * {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 /* Display the skills in a grid layout */
 .skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding-left: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	padding-left: 1rem;
 }
 
 .skillsList {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .skillsList li::before {
-    content: "›";
-    color: var(--react-light-blue);
-    padding: 0.5rem 1rem 0 1rem;
+	content: "›";
+	color: var(--react-light-blue);
+	padding: 0.5rem 1rem 0 1rem;
 }
 
 .namePronunciation {
-    font-weight: normal;
-    font-size: 14px;
-    color: var(--slate);
+	font-weight: normal;
+	font-size: 14px;
+	color: var(--slate);
 }

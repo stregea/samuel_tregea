@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Section.module.css";
 import FadeIn from "@/components/utils/FadeIn/FadeIn";
 
-
 /**
  * Renders a section with a fade-in effect, allowing for smooth transitions.
  *
@@ -18,13 +17,13 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
  * @returns {JSX.Element} The rendered Section component.
  */
 export default function Section({ children, id, delay = 0 }: { children: React.ReactNode, id: string, delay?: number }) {
-    return (
-        <section className={styles.section} id={id} data-testid={id}>
-            <div className={styles.content}>
-                <FadeIn delay={delay}>
-                    {children}
-                </FadeIn>
-            </div>
-        </section>
-    );
+	return (
+		<section className={styles.section} id={id} data-testid={id}>
+			<div className={styles.content}>
+				<FadeIn delay={delay}>
+					{children}
+				</FadeIn>
+			</div>
+		</section>
+	);
 };
