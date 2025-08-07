@@ -20,7 +20,7 @@ describe("About", () => {
 	/**
 	 * Test to ensure the About component renders correctly.
 	 */
-	test("Renders the About component", () => {
+	test("Renders the About component.", () => {
 		expect(screen.getByTestId("aboutMe")).toBeDefined();
 	});
 });

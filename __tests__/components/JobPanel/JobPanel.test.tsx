@@ -29,7 +29,7 @@ describe("JobPanel", () => {
 	/**
 	 * Test to verify the rendering of the JobPanel component.
 	 */
-	test("the rendering of the JobPanel component", () => {
+	test("the rendering of the JobPanel component.", () => {
 		// Verify the tabs are rendered.
 		expect(screen.getByTestId("jobTabs")).toBeDefined();
 
@@ -40,7 +40,7 @@ describe("JobPanel", () => {
 	/**
 	 * Test to verify the tabs render in a horizontal layout on mobile devices.
 	 */
-	test("the mobile rendering of the JobPanel component", () => {
+	test("the mobile rendering of the JobPanel component.", () => {
 		// Mock the mobile view
 		cleanup();
 		(useMediaQuery as any).mockReturnValue(true);

@@ -20,7 +20,7 @@ describe("Highlight", () => {
     /**
      * Test to verify the rendering of the Highlight component.
      */
-    test("the rendering of the Highlight component", () => {
+    test("the rendering of the Highlight component.", () => {
         const highlight = screen.getByTestId("highlight");
 
         expect(highlight).toBeDefined();

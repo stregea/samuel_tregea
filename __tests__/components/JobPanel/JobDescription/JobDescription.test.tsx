@@ -29,7 +29,7 @@ describe("JobDescription", () => {
 	/**
 	 * Test to verify the rendering of the JobDescription component.
 	 */
-	test("Renders the JobDescription component", () => {
+	test("Renders the JobDescription component.", () => {
 		expect(screen.getByTestId(`job-description-${currentTabIndex}`)).toBeDefined();
 	});
 });

@@ -8,7 +8,7 @@ import Header from "@/components/utils/Header/Header";
  * This suite tests the Header component, ensuring it renders correctly.
  */
 describe("Header", () => {
-    
+
     beforeEach(() => {
         render(<Header>{"Test Header"}</Header>);
     });
@@ -20,7 +20,7 @@ describe("Header", () => {
     /**
      * Test to verify the rendering of the Header component.
      */
-    test("the rendering of the Header component", () => {
+    test("the rendering of the Header component.", () => {
         const header = screen.getByTestId("header");
 
         expect(header).toBeDefined();
