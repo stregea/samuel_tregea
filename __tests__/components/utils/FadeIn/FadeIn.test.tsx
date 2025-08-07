@@ -37,15 +37,15 @@ describe("FadeIn", () => {
 	test("the rendering of the FadeIn component.", () => {
 		render(
 			<FadeIn>
-				<div data-testid="testElement"/>
+				{"TEST"}
 			</FadeIn>
 		);
 
-		const element  = screen.getByTestId("testElement");
+		const element  = screen.getByTestId("fadeIn");
 
 		expect(element).toBeDefined();
-		expect(element.parentElement).toBeDefined();
-		expect(element.parentElement?.className).toContain("fadeIn");
+		expect(element.innerHTML).toEqual("TEST");
+		expect(element.className).toContain("fadeIn");
 	});
 
 	/**

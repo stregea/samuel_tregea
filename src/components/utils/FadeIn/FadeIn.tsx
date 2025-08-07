@@ -75,6 +75,7 @@ export default function FadeIn({ children, delay = 0, fadeInOnView = true }: Fad
             ref={ref} 
             className={`${styles.fadeIn} ${isVisible ? styles.visible : styles.hidden}`}
             style={style}
+            data-testid="fadeIn"
         >
             {children}
         </div>
