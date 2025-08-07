@@ -12,29 +12,29 @@ import useMediaQuery from "@mui/material/useMediaQuery";
  * 
  * @component
  * @example
- * <Experience />
+ * <JobPanel />
  *
- * @returns {JSX.Element} The rendered Experience section.
+ * @returns {JSX.Element} The rendered JobPanel component.
  */
 export default function JobPanel() {
-    const [selectedTab, setSelectedTab] = useState(0);
-    const isMobile = useMediaQuery("(max-width: 600px)");
+	const [selectedTab, setSelectedTab] = useState(0);
+	const isMobile = useMediaQuery("(max-width: 600px)");
 
-    return (
-        <Box sx={
-            { 
-                display: "flex", 
-                minHeight: 300,
-                flexDirection: isMobile ? "column" : "row",
-            }
-        } >
-            <JobTabs career={careerData.career} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-            <JobDescription
-                selectedTabIndex={selectedTab}
-                currentTabIndex={selectedTab}
-                job={careerData.career[selectedTab]}
-                key={careerData.career[selectedTab].company + careerData.career[selectedTab].duration}
-            />
-        </Box>
-    );
+	return (
+		<Box sx={
+			{ 
+				display: "flex", 
+				minHeight: 300,
+				flexDirection: isMobile ? "column" : "row",
+			}
+		} >
+			<JobTabs career={careerData.career} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+			<JobDescription
+				selectedTabIndex={selectedTab}
+				currentTabIndex={selectedTab}
+				job={careerData.career[selectedTab]}
+				key={careerData.career[selectedTab].company + careerData.career[selectedTab].duration}
+			/>
+		</Box>
+	);
 };

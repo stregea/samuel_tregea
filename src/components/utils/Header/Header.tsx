@@ -12,9 +12,9 @@ import styles from "./Header.module.css";
  * @returns The styled header element.
  */
 export default function Header({ children }: { children: React.ReactNode }) {    
-    return (
-        <h2 className={styles.header} data-testid="header">
-            {children}
-        </h2>
-    );
+	return (
+		<h2 className={styles.header} data-testid="header">
+			{children}
+		</h2>
+	);
 };
