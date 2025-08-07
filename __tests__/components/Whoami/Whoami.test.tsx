@@ -20,7 +20,7 @@ describe("Whoami", () => {
 	/**
 	 * Test to ensure the Whoami component renders correctly.
 	 */
-	test("Renders the Whoami component", () => {
+	test("The rendering of the Whoami component.", () => {
 		expect(screen.getByTestId("whoami")).toBeDefined();
 	});
 });
