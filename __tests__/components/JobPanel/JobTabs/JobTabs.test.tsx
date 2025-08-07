@@ -5,8 +5,8 @@ import JobTabs from "@/components/JobPanel/JobTabs/JobTabs";
 
 // Mock useMediaQuery from MUI
 vi.mock("@mui/material/useMediaQuery", () => ({
-  __esModule: true,
-  default: vi.fn(() => false), // Setting to false allows us to default to a desktop view.
+	__esModule: true,
+	default: vi.fn(() => false), // Setting to false allows us to default to a desktop view.
 }));
 
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -62,7 +62,7 @@ describe("JobTabs", () => {
 				setSelectedTab={setSelectedTabMock}
 			/>
 		);
-		
+
 		// Validate the tabs are rendered in a horizontal layout.
 		const tabs = screen.getByTestId("jobTabs");
 
