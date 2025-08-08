@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "title": "test project",
+            "description": "This is a description for the test project.",
+            "sourceCode": "https://github.com/stregea",
+            "videoDemo": "",
+            "languages": ["Java"]
+        },
+        {
+            "title": "Sample Project",
+            "description": "This is a sample project description.",
+            "sourceCode": "https://github.com/stregea",
+            "videoDemo": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "languages": ["JavaScript", "React"]
+        }
+    ]
+}
