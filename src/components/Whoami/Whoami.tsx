@@ -1,7 +1,7 @@
 import styles from "./Whoami.module.css";
 import { Typewriter } from "react-simple-typewriter";
 import { Alert } from "@mui/material";
-import Section from "../utils/Section/Section";
+import Section from "@/components/utils/Section/Section";
 
 /**
  * Renders the "Whoami" section of the website, introducing the user with a typewriter effect
