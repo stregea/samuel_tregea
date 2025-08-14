@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Whoami from "@/components/Whoami/Whoami";
 import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
+import Projects from "@/components/Projects/Projects";
 
 /**
  * Home component serves as the main entry point for the application.
@@ -18,7 +19,7 @@ export default function Home() {
 				<Whoami />
 				<About />
 				<Experience />
-				{/* todo: projects */}
+				<Projects />
 				{/* todo: copyright */}
 				</div>
 				{/* todo: footer */}
