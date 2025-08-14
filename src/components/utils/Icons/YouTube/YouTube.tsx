@@ -20,7 +20,7 @@ export default function YouTube({url} : {url: string}) {
 			rel={"noopener noreferrer"}
 			aria-label={"YouTube"}
 			data-testid={"youtube-button"}>
-				<YouTubeIcon data-testid={"youtube-icon"} className={styles.icon} fontSize="large"/>
+				<YouTubeIcon data-testid={"youtube-icon"} className={styles.icon} />
 		</IconButton>
 	);
 };
