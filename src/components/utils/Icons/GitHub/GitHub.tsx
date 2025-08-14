@@ -20,7 +20,7 @@ export default function GitHub({url} : {url: string}) {
 			rel={"noopener noreferrer"}
 			aria-label={"GitHub"}
 			data-testid={"github-button"}>
-				<GitHubIcon data-testid={"github-icon"} className={styles.icon}/>
+				<GitHubIcon data-testid={"github-icon"} className={styles.icon} fontSize="large"/>
 		</IconButton>
 	);
 };
