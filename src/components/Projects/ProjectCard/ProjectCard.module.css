@@ -1,6 +1,6 @@
 .card {
 	transition: transform 0.3s;
-	width: 275px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .card:hover {
@@ -8,11 +8,15 @@
 }
 
 .card :global(.MuiCardHeader-subheader) {
-  color: var(--foreground); /* Or any color you prefer */
+  color: var(--foreground);
 }
 
 .card :global(.MuiCardHeader-title),
 .card :global(.MuiCardHeader-subheader),
 .card :global(.MuiCardContent-root) {
 	font-family: 'Rockwell', 'serif';
+}
+
+.subheader {
+	color: var(--slate);
 }
