@@ -1,9 +1,10 @@
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
-	--terminal-green: #4AF626;
+	--card: var(--background);
 	--react-light-blue: #61dafb;
 	--blue-background: #101c31;
+	--blue-background-light: #21314d;
 	--slate: #959caa;
 }
 
@@ -21,7 +22,7 @@ html {
 body {
 	color: var(--foreground);
 	background: var(--background);
-	font-family: Rockwell;
+	font-family: 'Rockwell', 'serif';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -37,6 +38,7 @@ body {
 	:root {
 		--background: var(--blue-background);
 		--foreground: #ededed;
+		--card: var(--blue-background-light);
 	}
 
 	html {
