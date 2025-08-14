@@ -19,7 +19,7 @@ export default function Projects () {
                     alignItems={"center"}
                 >
                     {projectData.projects.map((project, index) => (
-                        <FadeIn key={index} delay={index * 0.35}>
+                        <FadeIn key={index} delay={index * 0.2}>
                             <ProjectCard
                                 key={index}
                                 project={project}
