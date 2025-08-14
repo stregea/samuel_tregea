@@ -15,8 +15,8 @@ import Section from "@/components/utils/Section/Section";
  */
 export default function Whoami() {
 	const notice = "This website is currently under active construction.";
-	const words = ["sam"];
-	const description = "i'm a software engineer based in rochester, ny that is passionate about building clean, efficient, and scalable applications that deliver meaningful impact.";
+	const words = ["Hi, I'm Sam"];
+	const description = "I'm a software engineer based in Rochester, NY that is passionate about building clean, efficient, and scalable applications that deliver meaningful impact.";
 	const id = "whoami";
 	return (
 		<section className={styles.whoami} id={id} data-testid={id}>
@@ -25,18 +25,18 @@ export default function Whoami() {
 					<Alert severity="warning">{notice}</Alert>
 				</div>
 				<div className={styles.heading}>
-					{"hi, i'm "}
+					{/* {"hi, i'm "} */}
 					<span className={styles.typeWriter}>
 						<Typewriter
 							words={words}
 							loop={1}
 							cursor={true}
 							cursorStyle="|"
-							typeSpeed={175}
+							typeSpeed={100}
 						/>
 					</span>
 				</div>
-				<Section id="whoami-description" delay={1}>
+				<Section id="whoami-description" delay={1.3}>
 					<div className={styles.description}>
 						{description}
 					</div>
