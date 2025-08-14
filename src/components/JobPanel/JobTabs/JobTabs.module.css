@@ -17,7 +17,6 @@
 	justify-content: flex-start;
 	color: var(--slate) !important;
 	font-weight: normal;
-	font-family: Rockwell !important;
 }
 
 .tab:global(.Mui-selected) {
