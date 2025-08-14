@@ -22,7 +22,7 @@ html {
 body {
 	color: var(--foreground);
 	background: var(--background);
-	font-family: 'Rockwell', 'serif';
+	font-family: 'roboto';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
