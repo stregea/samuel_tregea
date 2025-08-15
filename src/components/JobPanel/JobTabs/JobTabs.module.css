@@ -19,11 +19,11 @@
 	font-weight: normal;
 }
 
-.tab:global(.Mui-selected) {
+.tab :global(.Mui-selected) {
 	color: var(--react-light-blue) !important;
 }
 
-.tab:global(.MuiTabs-scroller).tab:global(.MuiTabs-scroller)::--webkit-scrollbar {
+.tab :global(.MuiTabs-scroller).tab:global(.MuiTabs-scroller)::--webkit-scrollbar {
 	width: 4px;
 }
 
