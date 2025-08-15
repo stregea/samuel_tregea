@@ -6,28 +6,38 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import projectData from "@/data/projects.json";
 
+/**
+ * Renders the "Projects" section of the website, displaying my personal and college projects
+ * in a grid layout.
+ * 
+ * @component
+ * @example
+ * <Projects />
+ *
+ * @returns {JSX.Element} The rendered Projects component.
+ */
 export default function Projects () {
-    return (
-        <Section id="projects">
-            <Header>{"// projects"}</Header>
-            <div className={styles.projects}>
-                <Grid
-                    container
-                    rowSpacing={2}
-                    columnSpacing={2}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                >
-                    {projectData.projects.map((project, index) => (
-                        <FadeIn key={index} delay={index * 0.2}>
-                            <ProjectCard
-                                key={index}
-                                project={project}
-                            />
-                        </FadeIn>
-                    ))}
-                </Grid>
-            </div>
-        </Section>
-    ); 
+	return (
+		<Section id="projects">
+			<Header>{"// projects"}</Header>
+			<div className={styles.projects}>
+				<Grid
+					container
+					rowSpacing={2}
+					columnSpacing={2}
+					justifyContent={"center"}
+					alignItems={"center"}
+				>
+					{projectData.projects.map((project, index) => (
+						<FadeIn key={index} delay={index * 0.2}>
+							<ProjectCard
+								key={index}
+								project={project}
+							/>
+						</FadeIn>
+					))}
+				</Grid>
+			</div>
+		</Section>
+	); 
 };
