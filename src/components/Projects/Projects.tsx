@@ -7,6 +7,7 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
 import ProjectCard from "@/components/Projects/ProjectCard/ProjectCard";
 import projectData from "@/data/projects.json";
 import Pagination from "@mui/material/Pagination";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 /**
  * Renders the "Projects" section of the website, displaying my personal and college projects
@@ -19,8 +20,14 @@ import Pagination from "@mui/material/Pagination";
  * @returns {JSX.Element} The rendered Projects component.
  */
 export default function Projects () {
+	// Check if the screen is mobile-sized.
+	const isMobile = useMediaQuery("(max-width: 600px)");
+
 	// Set the max number of projects per page.
-	const projectsPerPage = 6;
+	const projectsPerPage = isMobile ? 3 : 6;
+
+	// Have the delay be slower on mobile.
+	const delay = isMobile ? 0.2 : 0.15
 
 	// Calculate the total number of pages.
     const totalPages = Math.ceil(projectData.projects.length / projectsPerPage);
@@ -49,7 +56,7 @@ export default function Projects () {
 					data-testid={"project-grid"}
 				>
 					{projects.map((project, index) => (
-						<FadeIn key={index} delay={index * 0.2}>
+						<FadeIn key={`project-${index}-${project.description}`} delay={index * delay}>
 							<ProjectCard
 								key={index}
 								project={project}
