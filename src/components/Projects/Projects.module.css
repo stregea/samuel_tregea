@@ -1,4 +1,18 @@
 .projects {
-	min-height: 50vh;
 	padding: 1rem;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+/** MUI Pagination Overrides **/
+.pagination :global(.Mui-selected) {
+    color: var(--react-light-blue) !important;
+}
+
+.pagination :global(.MuiPaginationItem-root) {
+	color: var(--foreground);
 }
