@@ -50,15 +50,15 @@ export default function ProjectCard({
 	 * @returns A Chip component displaying the project category.
 	 */
 	const createChip = (category: string) => {
-		const reactStyle = {
-			borderColor: "var(--react-light-blue)",
-			color: "var(--react-light-blue)",
+		const style = {
+			borderColor: category === "Personal" ? "var(--react-light-blue)" : "var(--slate)",
+			color: category === "Personal" ? "var(--react-light-blue)" : "var(--slate)",
 		};
 
 		return <Chip 
 			label={category} 
 			variant={"outlined"} 
-			sx={reactStyle} 
+			sx={style} 
 			size={"small"} 
 			data-testid={"chip"} />;
 	};
