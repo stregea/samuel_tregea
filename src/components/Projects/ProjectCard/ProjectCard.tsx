@@ -3,11 +3,12 @@ import styles from "./ProjectCard.module.css";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Chip from "@mui/material/Chip";
+import Highlight from "@/components/utils/Highlight/Highlight";
 import GitHub from "@/components/utils/Icons/GitHub/GitHub";
 import YouTube from "@/components/utils/Icons/YouTube/YouTube";
 import Document from "@/components/utils/Icons/Document/Document";
-import CardActions from "@mui/material/CardActions";
-import Highlight from "@/components/utils/Highlight/Highlight";
 
 /**
  * Renders a project card within the <Projects /> component. This will display the project's 
@@ -29,8 +30,10 @@ export default function ProjectCard({
 		videoDemo?: string;
 		documentation?: string
 		languages: string[];
+		category: string
 	};
 }) {
+
 	/**
 	 * Format the list of programming languages into a comma-separated string.
 	 * @returns A list of languages used in the project.
@@ -41,20 +44,45 @@ export default function ProjectCard({
 		));
 	};
 	
+	/**
+	 * Creates a chip component for the project category.
+	 * @param category - The category of the project.
+	 * @returns A Chip component displaying the project category.
+	 */
+	const createChip = (category: string) => {
+		const reactStyle = {
+			borderColor: "var(--react-light-blue)",
+			color: "var(--react-light-blue)",
+		};
+
+		return <Chip 
+			label={category} 
+			variant={"outlined"} 
+			sx={reactStyle} 
+			size={"small"} 
+			data-testid={"chip"} />;
+	};
+
 	return (
 		<div className={styles.card}>
-			<Card sx={{backgroundColor: "var(--card)", width: "275px"}}>
+			<Card sx={{backgroundColor: "var(--card)", width: "275px"}} data-testid={"project-card"}>
 				<CardHeader 
 					title={<Highlight>{project.title}</Highlight>}
 					subheader={<div className={styles.subheader}>{getLanguages()}</div>}
+					data-testid={"card-header"}
 				/>
-				<CardContent sx={{color: "var(--foreground)", height: "100px"}}>
-					{project.description}
+				<CardContent sx={{color: "var(--foreground)", height: "100px", fontSize: "15px"}} data-testid={"card-content"}>
+					{ project.description }
 				</CardContent>
-				<CardActions disableSpacing sx={{justifyContent: "flex-end"}}>
-					{project.sourceCode && <GitHub url={project.sourceCode} />}
-					{project.videoDemo && <YouTube url={project.videoDemo} />}
-					{project.documentation && <Document url={project.documentation} />}
+				<CardActions disableSpacing sx={{justifyContent: "space-between"}} data-testid={"card-actions"}>
+					<div className={styles.chipContainer}>
+						{ project.category && createChip(project.category)}
+					</div>
+					<div>
+						{ project.sourceCode && <GitHub url={project.sourceCode} /> }
+						{ project.videoDemo && <YouTube url={project.videoDemo} /> }
+						{ project.documentation && <Document url={project.documentation} /> }
+					</div>
 				</CardActions>	
 			</Card>
 		</div>

@@ -11,12 +11,10 @@
   color: var(--foreground);
 }
 
-.card :global(.MuiCardHeader-title),
-.card :global(.MuiCardHeader-subheader),
-.card :global(.MuiCardContent-root) {
-	font-family: 'Rockwell', 'serif';
-}
-
 .subheader {
 	color: var(--slate);
+}
+
+.chipContainer {
+	padding-left: .5rem
 }
