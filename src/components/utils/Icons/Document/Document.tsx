@@ -19,8 +19,8 @@ export default function Document({url} : {url: string}) {
             target={"_blank"}
             rel={"noopener noreferrer"}
             aria-label={"Documentation"}
-			data-testid={"documentation-button"}>
-			<Description data-testid={"documentation-icon"} className={styles.icon}/>
+			data-testid={"document-button"}>
+			<Description data-testid={"document-icon"} className={styles.icon}/>
 		</IconButton>
 	);
 }
