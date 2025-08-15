@@ -21,10 +21,9 @@
 
 /** Container CSS **/
 .descriptionContainer {
-	height: 35vh;
+	height: 18rem;
 	overflow-y: auto;
 	padding-right: 0.1rem;
-	/* Optional: smooth scrolling and custom scrollbar */
 	scroll-behavior: smooth;
 }
 
