@@ -1,7 +1,7 @@
 /** Overrides for the MUI Tabs CSS **/
 
 .tabGroup {
-	min-width: 280px; /** bare minimum tab width */
+	min-width: 281px; /** bare minimum tab width */
 	min-height: 465px;
 	align-items: flex-start;
 	text-align: left;
@@ -19,11 +19,11 @@
 	font-weight: normal;
 }
 
-.tab :global(.Mui-selected) {
+.tab:global(.Mui-selected) {
 	color: var(--react-light-blue) !important;
 }
 
-.tab :global(.MuiTabs-scroller).tab:global(.MuiTabs-scroller)::--webkit-scrollbar {
+.tab:global(.MuiTabs-scroller).tab:global(.MuiTabs-scroller)::--webkit-scrollbar {
 	width: 4px;
 }
 
