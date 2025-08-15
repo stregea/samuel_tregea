@@ -1,18 +1,136 @@
 {
     "projects": [
         {
-            "title": "test project",
-            "description": "This is a description for the test project.",
-            "sourceCode": "https://github.com/stregea",
-            "videoDemo": "",
-            "languages": ["Java"]
+            "title": "My Website",
+            "description": "The source code to this very website!",
+            "sourceCode": "https://github.com/stregea/samuel_tregea",
+            "languages": ["JavaScript", "NextJS"],
+            "category": "Personal"
         },
         {
-            "title": "Sample Project",
-            "description": "This is a sample project description.",
-            "sourceCode": "https://github.com/stregea",
-            "videoDemo": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "languages": ["JavaScript", "React"]
+            "title": "Discord Bots",
+            "description": "A collection of Discord bot(s) built using the Discord API.",
+            "sourceCode": "https://github.com/stregea/DiscordBots",
+            "languages": ["Python", "Shell"],
+            "category": "Personal"
+        },
+        {
+            "title": "Lineup Generator",
+            "description": "Commandline application that generates a properly positioned lineup for a co-ed kickball/softball league.",
+            "sourceCode": "https://github.com/stregea/Lineup-Generator",
+            "languages": ["Python"],
+            "category": "Personal"
+        },
+        {
+            "title": "IMDB Movie Database",
+            "description": "Project allows for the normalization and visualization of data from the IMDB Public Dataset.",
+            "sourceCode": "https://github.com/stregea/IMDB_Movie_Database",
+            "languages": ["Python"],
+            "category": "College"
+        },
+        {
+            "title": "AlgoViz",
+            "description": "iOS application that allows for step-by-step visualizations of various sorting algorithms.",
+            "sourceCode": "https://github.com/stregea/AlgoViz",
+            "languages": ["Swift"],
+            "category": "Personal"
+        },
+        {
+            "title": "TransactionTrackr",
+            "description": "Project that tracks and visualizes transactions over time to help users manage their finances.",
+            "sourceCode": "https://github.com/stregea/TransactionTrackr",
+            "languages": ["Python"],
+            "category": "Personal"
+        },
+        {
+            "title": "DBMS",
+            "description": "Project that creates a Database Management System (DBMS) from the ground up.",
+            "sourceCode": "https://github.com/stregea/DBManagementSystem",
+            "languages": ["C"],
+            "category": "College"
+        },
+        {
+            "title": "ESS Simulation",
+            "description": "Program that models and analyzes evolutionary stable strategies (ESS) within the context of game theory.",
+            "sourceCode": "https://github.com/stregea/Game_Theory_ESS_Simulation",
+            "documentation": "https://github.com/stregea/Game_Theory_ESS_Simulation/blob/main/src/README.txt",
+            "languages": ["Python"],
+            "category": "College"
+        },
+        {
+            "title": "Route Finding",
+            "description": "Program that finds the shortest path between cities using DFS, BFS, and A* search algorithms.",
+            "sourceCode": "https://github.com/stregea/RouteFinding",
+            "languages": ["Java"],
+            "category": "College"
+        },
+        {
+            "title": "Secure Messaging",
+            "description": "This project uses public key encryption to send secure messages to other users over a distributed system.",
+            "sourceCode": "https://github.com/stregea/Messenger",
+            "videoDemo": "https://www.youtube.com/embed/4pZOXeMghDY",
+            "languages": ["C#"],
+            "category": "College"
+        },
+        {
+            "title": "Prime Number Gen",
+            "description": "Generates large prime numbers using parallel processing.",
+            "sourceCode": "https://github.com/stregea/Prime_Number_Generation",
+            "languages": ["C#"],
+            "category": "College"
+        },
+        {
+            "title": "Disk Usage",
+            "description": "Analyzes disk space usage by performing both sequential and parallel searches.",
+            "sourceCode": "https://github.com/stregea/DiskUsage",
+            "languages": ["C#"],
+            "category": "College"
+        },
+        {
+            "title": "My Shell",
+            "description": "Creates a bash shell that is able to interact with a personal computer via Linux commands.",
+            "sourceCode": "https://github.com/stregea/MyShell",
+            "languages": ["C"],
+            "category": "College"
+        },
+        {
+            "title": "Family Tree",
+            "description": "This program builds an N-ary tree where each node stores details about individuals and their descendants.",
+            "sourceCode": "https://github.com/stregea/Offspring",
+            "videoDemo": "https://www.youtube.com/embed/9y1Zuu7maAM",
+            "languages": ["C"],
+            "category": "College"
+        },
+        {
+            "title": "Ahnentafel",
+            "description": "This program allows for conversion of ahnentafel numbers between binary, base-10, as well as a written depiction of the number.",
+            "sourceCode": "https://github.com/stregea/Ahnentafel",
+            "languages": ["C"],
+            "category": "College"
+        },
+        {
+            "title": "Party Chat",
+            "description": "A chatroom application where users exchange messages over TCP connections.",
+            "sourceCode": "https://github.com/stregea/PartyChat",
+            "videoDemo": "https://www.youtube.com/embed/QMSo65L4WuE",
+            "languages": ["Java"],
+            "category": "Personal"
+        },
+        {
+            "title": "Place Tiles",
+            "description": "Based on r/place, this application allows users to collaboratively place tiles on a grid.",
+            "sourceCode": "https://github.com/stregea/PlaceTiles",
+            "videoDemo": "https://www.youtube.com/embed/RxenVJs2yu8",
+            "languages": ["Java"],
+            "category": "College"
+        },
+        {
+            "title": "Microwave",
+            "description": "A simulator for a microwave oven, utilizing a microcontroller and hardware to replicate microwave functionality.",
+            "sourceCode": "https://github.com/stregea/Microwave",
+            "documentation": "https://docs.google.com/document/d/1zXlwfiMl7CAiryuMPynU7dEhau8Xp02FgqaDIp_kdlQ/edit?usp=sharing",
+            "languages": ["C"],
+            "category": "College"
         }
     ]
 }
