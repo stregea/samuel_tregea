@@ -60,7 +60,7 @@ export default function ProjectCard({
 			variant={"outlined"} 
 			sx={style} 
 			size={"small"} 
-			data-testid={"chip"} />;
+			data-testid={"project-chip"} />;
 	};
 
 	return (
@@ -69,12 +69,12 @@ export default function ProjectCard({
 				<CardHeader 
 					title={<Highlight>{project.title}</Highlight>}
 					subheader={<div className={styles.subheader}>{getLanguages()}</div>}
-					data-testid={"card-header"}
+					data-testid={"project-header"}
 				/>
-				<CardContent sx={{color: "var(--foreground)", height: "100px", fontSize: "15px"}} data-testid={"card-content"}>
+				<CardContent sx={{color: "var(--foreground)", height: "100px", fontSize: "15px"}} data-testid={"project-description"}>
 					{ project.description }
 				</CardContent>
-				<CardActions disableSpacing sx={{justifyContent: "space-between"}} data-testid={"card-actions"}>
+				<CardActions disableSpacing sx={{justifyContent: "space-between"}} data-testid={"project-icons"}>
 					<div className={styles.chipContainer}>
 						{ project.category && createChip(project.category)}
 					</div>
