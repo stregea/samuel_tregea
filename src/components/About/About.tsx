@@ -16,41 +16,27 @@ import Highlight from "@/components/utils/Highlight/Highlight";
  */
 export default function About() {
 
+
 	/**
-	 * Determines whether a given year is a leap year.
+	 * Calculates the current age based on a fixed birthday (July 28, 1997).
 	 *
-	 * A leap year is divisible by 4, except for years that are divisible by 100,
-	 * unless they are also divisible by 400.
-	 *
-	 * @param year - The year to check.
-	 * @returns `true` if the year is a leap year, otherwise `false`.
+	 * @returns {number} The absolute value of the calculated age.
 	 */
-	const isLeapYear = (year: number) => {
-		return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
-	};
-
-
-  /**
-   * Calculates the current age based on a fixed birthday (July 28, 1997).
-   * The calculation considers leap years for the current year.
-   * If today is the birthday, the age is rounded; otherwise, it is floored.
-   *
-   * @returns {number} The absolute value of the calculated age.
-   */
 	const getMyCurrentAge = () => {
-		const today = new Date()
-		const birthday = new Date('1997-07-28');
-		const seconds = 60;
-		const minutes = 60;
-		const hours = 24;
-		const days = isLeapYear(today.getFullYear()) ? 366 : 365;
+		// Convert the input string into a Date object
+		const birthDate = new Date("1997-07-28");
+		const today = new Date();
 
-		const mathFunction = today.getMonth() === birthday.getMonth() && today.getDate() === birthday.getDate() ? Math.round : Math.floor
+		let age = today.getFullYear() - birthDate.getFullYear();
+		const monthDiff = today.getMonth() - birthDate.getMonth();
+		const dayDiff = today.getDate() - birthDate.getDate();
 
-		const yearDifference = (((today.getTime() - birthday.getTime()) / 1000) / (seconds * minutes * hours)) / days;
-		const age = mathFunction(yearDifference);
+		// Adjust age if birthday hasn't occurred yet this year.
+		if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+			age--;
+		}
 
-		return Math.abs(age);
+		return age;
 	};
 
 	const intro = (

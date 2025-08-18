@@ -1,11 +1,11 @@
 /** Overrides for the MUI Tabs CSS **/
+
 .tabGroup {
-	min-width: 312px; /** bare minimum tab width */
-	max-width: 320px;
+	min-width: 281px; /** bare minimum tab width */
 	min-height: 465px;
 	align-items: flex-start;
 	text-align: left;
-	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	border-right: 1px solid var(--slate);
 }
 
 .tabGroup :global(.MuiTabs-indicator) {
@@ -17,7 +17,6 @@
 	justify-content: flex-start;
 	color: var(--slate) !important;
 	font-weight: normal;
-	font-family: Rockwell !important;
 }
 
 .tab:global(.Mui-selected) {
