@@ -6,23 +6,23 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
  * Props for the JobDescription component.
  */
 export interface JobDescriptionProps {
-	children?: React.ReactNode;
-	selectedTabIndex: number;
-	currentTabIndex: number;
-	job?: {
-		title: string;
-		company: string;
-		location: string;
-		duration: string;
-		description: string[];
-	};
+    children?: React.ReactNode;
+    selectedTabIndex: number;
+    currentTabIndex: number;
+    job?: {
+        title: string;
+        company: string;
+        location: string;
+        duration: string;
+        description: string[];
+    };
 };
 
 /**
  * Renders a job description panel for a specific job entry.
  * This component is used within a tabbed interface to display details of a selected job.
  * Reference: https://mui.com/material-ui/react-tabs/#vertical-tabs
- * 
+ *
  * @component
  * @example
  * <JobDescription
@@ -30,42 +30,42 @@ export interface JobDescriptionProps {
  *   currentTabIndex={0}
  *   job={JobObject}
  * />
- * 
+ *
  * @param props - Contains children (job description content), selectedTabIndex, currentTabIndex, and job data.
  * @returns A panel that displays the job description when the tab is selected.
  */
 export default function JobDescription(props: JobDescriptionProps) {
-	const { selectedTabIndex, currentTabIndex, job, ...other } = props;
-	const id = `job-description-${currentTabIndex}`;
-	return (
-		<div
-			role="tabpanel"
-			hidden={currentTabIndex !== selectedTabIndex}
-			id={id}
-			data-testid={id}
-			aria-labelledby={`vertical-tab-${currentTabIndex}`}
-			{...other}
-		>
-		{currentTabIndex === selectedTabIndex && job && (
-			<Box className={styles.description}>
-				<div className={styles.jobTitle}> 
-					<h4> {job.title}</h4>
-				</div>
-				<div className={styles.jobDetails}>
-					<p>{job.duration}</p>
-					<p>{job.location}</p>
-				</div>
-				<div className={styles.descriptionContainer}>
-					<ul className={styles.descriptionList}>
-						{job.description.map((desc, i) => (
-							<FadeIn key={`job-desc-fade-${i}`} delay={i * 0.15} fadeInOnView={false}>
-								<li key={`job-desc-${i}`}>{desc}</li>
-							</FadeIn>
-						))}
-					</ul>
-				</div>
-			</Box>
-		)}
-		</div>
-	);
+    const {selectedTabIndex, currentTabIndex, job, ...other} = props;
+    const id = `job-description-${currentTabIndex}`;
+    return (
+        <div
+            role="tabpanel"
+            hidden={currentTabIndex !== selectedTabIndex}
+            id={id}
+            data-testid={id}
+            aria-labelledby={`vertical-tab-${currentTabIndex}`}
+            {...other}
+        >
+            {currentTabIndex === selectedTabIndex && job && (
+                <Box className={styles.description}>
+                    <div className={styles.jobTitle}>
+                        <h4> {job.title}</h4>
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <p>{job.duration}</p>
+                        <p>{job.location}</p>
+                    </div>
+                    <div className={styles.descriptionContainer}>
+                        <ul className={styles.descriptionList}>
+                            {job.description.map((desc, i) => (
+                                <FadeIn key={`job-desc-fade-${i}`} delay={i * 0.15} fadeInOnView={false}>
+                                    <li key={`job-desc-${i}`}>{desc}</li>
+                                </FadeIn>
+                            ))}
+                        </ul>
+                    </div>
+                </Box>
+            )}
+        </div>
+    );
 };

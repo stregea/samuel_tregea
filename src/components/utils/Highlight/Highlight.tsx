@@ -11,10 +11,10 @@ import styles from "./Highlight.module.css";
  * @param {React.ReactNode} props.children - The text or elements to highlight.
  * @returns {JSX.Element} The rendered Highlight component.
  */
-export default function Highlight({ children }: { children: React.ReactNode }) {    
-	return (
-		<span className={styles.highlight} data-testid="highlight">
+export default function Highlight({children}: { children: React.ReactNode }) {
+    return (
+        <span className={styles.highlight} data-testid="highlight">
 			{children}
 		</span>
-	);
+    );
 };

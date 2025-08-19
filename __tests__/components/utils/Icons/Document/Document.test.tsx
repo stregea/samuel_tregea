@@ -10,7 +10,7 @@ import Document from "@/components/utils/Icons/Document/Document";
 describe("Document Icon", () => {
 
     beforeEach(() => {
-        render(<Document url={"https://docs.com"} />);
+        render(<Document url={"https://docs.com"}/>);
     });
 
     afterEach(() => {

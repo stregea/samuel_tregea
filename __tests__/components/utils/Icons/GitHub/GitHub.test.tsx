@@ -10,7 +10,7 @@ import GitHub from "@/components/utils/Icons/GitHub/GitHub";
 describe("GitHub Icon", () => {
 
     beforeEach(() => {
-        render(<GitHub url={"https://github.com"} />);
+        render(<GitHub url={"https://github.com"}/>);
     });
 
     afterEach(() => {
@@ -20,11 +20,11 @@ describe("GitHub Icon", () => {
     /**
      * Test to verify the rendering of the GitHub component.
      */
-	test("the rendering of the GitHub icon.", () => {
+    test("the rendering of the GitHub icon.", () => {
         const button = screen.getByTestId("github-button");
-		const icon = screen.getByTestId("github-icon");
+        const icon = screen.getByTestId("github-icon");
 
         expect(button).toBeDefined();
-		expect(icon).toBeDefined();
-	});
+        expect(icon).toBeDefined();
+    });
 });

@@ -15,57 +15,57 @@ import useMediaQuery from "@mui/material/useMediaQuery";
  *   selectedTab={selectedTabIndex}
  *   setSelectedTab={setSelectedTabFunction}
  * />
- * 
+ *
  * @param career - An array of job objects, each containing company, location, title, duration, and description.
  * @param selectedTab - The index of the currently selected tab.
  * @param setSelectedTab - Callback to update the selected tab index.
  * @returns A vertical scrollable tab component for job navigation.
  */
 export default function JobTabs({
-	career,
-	selectedTab,
-	setSelectedTab,
-}: {
-	career: Array<{
-		company: string;
-		location: string;
-		title: string;
-		duration: string;
-		description: string[];
-	}>;
-	selectedTab: number;
-	setSelectedTab: (tab: number) => void;
+                                    career,
+                                    selectedTab,
+                                    setSelectedTab,
+                                }: {
+    career: Array<{
+        company: string;
+        location: string;
+        title: string;
+        duration: string;
+        description: string[];
+    }>;
+    selectedTab: number;
+    setSelectedTab: (tab: number) => void;
 }) {
-	
-	const isMobile = useMediaQuery("(max-width: 600px)");
 
-	// Handle tab change event.
-	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
-		setSelectedTab(newValue);
-	};
+    const isMobile = useMediaQuery("(max-width: 600px)");
 
-	return (
-		<Tabs
-			orientation={isMobile ? "horizontal" : "vertical"}
-			variant="scrollable"
-			visibleScrollbar
-			scrollButtons={false}
-			allowScrollButtonsMobile
-			value={selectedTab}
-			onChange={handleChange}
-			className={styles.tabGroup}
-			data-testid="jobTabs"
-		>
-			{career.map((job, idx) => (
-				<Tab
-					label={job.company}
-					id={`tab-${idx}`}
-					data-testid={`tab-${idx}`}
-					aria-controls={`tab-${idx}`}
-					key={job.company + job.duration}
-					className={styles.tab}
-				/>
-			))}
-		</Tabs>
-	);
+    // Handle tab change event.
+    const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
+        setSelectedTab(newValue);
+    };
+
+    return (
+        <Tabs
+            orientation={isMobile ? "horizontal" : "vertical"}
+            variant="scrollable"
+            visibleScrollbar
+            scrollButtons={false}
+            allowScrollButtonsMobile
+            value={selectedTab}
+            onChange={handleChange}
+            className={styles.tabGroup}
+            data-testid="jobTabs"
+        >
+            {career.map((job, idx) => (
+                <Tab
+                    label={job.company}
+                    id={`tab-${idx}`}
+                    data-testid={`tab-${idx}`}
+                    aria-controls={`tab-${idx}`}
+                    key={job.company + job.duration}
+                    className={styles.tab}
+                />
+            ))}
+        </Tabs>
+    );
 };

@@ -10,7 +10,7 @@ import YouTube from "@/components/utils/Icons/YouTube/YouTube";
 describe("YouTube Icon", () => {
 
     beforeEach(() => {
-        render(<YouTube url={"https://youtube.com"} />);
+        render(<YouTube url={"https://youtube.com"}/>);
     });
 
     afterEach(() => {

@@ -1,5 +1,5 @@
-import { describe, test, expect, beforeEach, afterEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import {describe, test, expect, beforeEach, afterEach} from "vitest";
+import {render, screen, cleanup} from "@testing-library/react";
 import Experience from "@/components/Experience/Experience";
 
 /**
@@ -9,18 +9,18 @@ import Experience from "@/components/Experience/Experience";
  */
 describe("Experience", () => {
 
-	beforeEach(() => {
-		render(<Experience />);
-	});
+    beforeEach(() => {
+        render(<Experience/>);
+    });
 
-	afterEach(() => {
-		cleanup();
-	});
+    afterEach(() => {
+        cleanup();
+    });
 
-	/**
-	 * Test to ensure the Experience component renders correctly.
-	 */
-	test("the rendering of the Experience component.", () => {
-		expect(screen.getByTestId("experience")).toBeDefined();
-	});
+    /**
+     * Test to ensure the Experience component renders correctly.
+     */
+    test("the rendering of the Experience component.", () => {
+        expect(screen.getByTestId("experience")).toBeDefined();
+    });
 });
