@@ -1,10 +1,10 @@
-import { describe, test, expect, beforeEach, afterEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import {describe, test, expect, beforeEach, afterEach} from "vitest";
+import {render, screen, cleanup} from "@testing-library/react";
 import Header from "@/components/utils/Header/Header";
 
 /**
  * Header Test Suite
- * 
+ *
  * This suite tests the Header component, ensuring it renders correctly.
  */
 describe("Header", () => {
