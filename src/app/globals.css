@@ -24,7 +24,7 @@ html {
 body {
 	color: var(--foreground);
 	background: var(--background);
-	font-family: 'roboto', serif;
+	font-family: 'roboto', 'arial', 'sans-serif';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
