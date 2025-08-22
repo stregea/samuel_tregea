@@ -64,7 +64,7 @@ export default function ProjectCard({
 
     return (
         <div className={styles.card}>
-            <Card sx={{backgroundColor: "var(--card)", width: "275px"}} data-testid={"project-card"}>
+            <Card sx={{backgroundColor: "var(--card)", width: "285px"}} data-testid={"project-card"}>
                 <CardHeader
                     title={<Highlight>{project.title}</Highlight>}
                     subheader={<div className={styles.subheader}>{getLanguages()}</div>}
