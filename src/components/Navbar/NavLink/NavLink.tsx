@@ -30,6 +30,7 @@ export default function NavLink({sectionId, text, onClick}: NavLinkProps) {
                 color: "var(--react-light-blue)",
                 "&:visited": {color: "var(--react-light-blue)"},
             }}
+            data-testid={`navlink-${sectionId}`}
         >
             {text}
         </Typography>

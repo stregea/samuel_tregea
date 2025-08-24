@@ -54,7 +54,7 @@ export default function Navbar({window}: NavbarProps) {
     }
 
     return (
-        <Slide direction={"down"} in={!trigger} id={"navbar"}>
+        <Slide direction={"down"} in={!trigger} data-testid={"navbar"}>
             <AppBar sx={{backgroundColor: "var(--background)"}}>
                 <Toolbar sx={{justifyContent: "space-between"}}>
 
