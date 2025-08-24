@@ -47,13 +47,19 @@ export default function Navbar({window}: NavbarProps) {
         {id: "projects", text: "Projects"},
     ];
 
+    const mediaUrls = {
+        linkedIn: "https://www.linkedin.com/in/samueltregea/",
+        gitHub: "https://www.github.com/stregea",
+        email: "sdtregea@gmail.com"
+    }
+
     return (
-        <Slide direction="down" in={!trigger}>
+        <Slide direction={"down"} in={!trigger} id={"navbar"}>
             <AppBar sx={{backgroundColor: "var(--background)"}}>
                 <Toolbar sx={{justifyContent: "space-between"}}>
 
                     {/* Hamburger menu for mobile view. */}
-                    <MobileMenu sections={sections} scrollIntoView={scrollIntoView} navbarVisible={!trigger} />
+                    <MobileMenu sections={sections} scrollIntoView={scrollIntoView} navbarVisible={!trigger}/>
 
                     {/* Navbar links for desktop. */}
                     <Box sx={{display: {xs: "none", md: "flex"}, gap: "1rem", padding: "8px"}}>
@@ -69,9 +75,9 @@ export default function Navbar({window}: NavbarProps) {
 
                     {/* Social media icons. */}
                     <Box>
-                        <LinkedIn url="https://www.linkedin.com/in/samueltregea/"/>
-                        <GitHub url="https://www.github.com/stregea"/>
-                        <Email email="sdtregea@gmail.com"/>
+                        <LinkedIn url={mediaUrls.linkedIn}/>
+                        <GitHub url={mediaUrls.gitHub}/>
+                        <Email email={mediaUrls.email}/>
                     </Box>
                 </Toolbar>
             </AppBar>
