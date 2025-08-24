@@ -1,5 +1,5 @@
-import { describe, test, expect, beforeEach, afterEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import {describe, test, expect, beforeEach, afterEach} from "vitest";
+import {render, screen, cleanup} from "@testing-library/react";
 import LinkedIn from "@/components/utils/Icons/LinkedIn/LinkedIn";
 
 /**
@@ -9,7 +9,7 @@ import LinkedIn from "@/components/utils/Icons/LinkedIn/LinkedIn";
  */
 describe("LinkedIn Icon", () => {
     beforeEach(() => {
-        render(<LinkedIn url={"https://www.linkedin.com/in/username"} />);
+        render(<LinkedIn url={"https://www.linkedin.com/in/username"}/>);
     });
 
     afterEach(() => {
