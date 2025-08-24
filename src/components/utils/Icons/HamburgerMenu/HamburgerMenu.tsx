@@ -7,6 +7,16 @@ type HamburgerMenuProps = {
     onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
+/**
+ * Renders a hamburger menu icon button for mobile navigation.
+ *
+ * @component
+ * @example
+ * <HamburgerMenu controls={"menu-appbar"} onClick={handleMenuOpen} />
+ *
+ * @param controls - The id of the menu element that this button controls.
+ * @param onClick - Optional click handler for the button.
+ */
 export default function HamburgerMenu({controls, onClick}: HamburgerMenuProps) {
     return (
         <IconButton
