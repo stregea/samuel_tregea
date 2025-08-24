@@ -16,6 +16,7 @@ describe("Navbar", () => {
         expect(screen.getByTestId("navbar")).toBeDefined();
 
         // Navigation links
+        expect(screen.getByTestId("mobileMenu")).toBeDefined();
         expect(screen.getByTestId("navlink-aboutMe")).toBeDefined();
         expect(screen.getByTestId("navlink-experience")).toBeDefined();
         expect(screen.getByTestId("navlink-projects")).toBeDefined();
