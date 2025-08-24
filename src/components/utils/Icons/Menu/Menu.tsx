@@ -24,6 +24,7 @@ export default function Menu({controls, onClick}: MenuProps) {
             aria-controls={controls}
             aria-haspopup={"true"}
             onClick={onClick}
+            data-testid={"menu-button"}
         >
             <MenuIcon data-testid={"menu-icon"} className={styles.icon}/>
         </IconButton>
