@@ -52,7 +52,7 @@ export default function MobileMenu({sections, scrollIntoView, navbarVisible}: Me
     }, [navbarVisible]);
 
     return (
-        <Box sx={{flexGrow: 0, display: {xs: "flex", md: "none" }}}>
+        <Box sx={{flexGrow: 0, display: {xs: "flex", md: "none" }}} id={"mobileMenu"}>
             <HamburgerMenu controls={"menu-appbar"} onClick={openMenu}/>
             <Menu
                 id="menu-appbar"
