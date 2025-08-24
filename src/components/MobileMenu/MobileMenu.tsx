@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
-import HamburgerMenu from "@/components/utils/Icons/HamburgerMenu/HamburgerMenu";
+import MenuIcon from "@/components/utils/Icons/Menu/Menu";
 import Menu from "@mui/material/Menu";
 
 type MenuProps = {
@@ -53,7 +53,7 @@ export default function MobileMenu({sections, scrollIntoView, navbarVisible}: Me
 
     return (
         <Box sx={{flexGrow: 0, display: {xs: "flex", md: "none" }}} data-testid={"mobileMenu"}>
-            <HamburgerMenu controls={"menu-appbar"} onClick={openMenu}/>
+            <MenuIcon controls={"menu-appbar"} onClick={openMenu}/>
             <Menu
                 id="menu-appbar"
                 anchorEl={anchorElement}

@@ -2,7 +2,7 @@ import styles from "@/components/utils/Icons/Icons.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 
-type HamburgerMenuProps = {
+type MenuProps = {
     controls: string,
     onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 };
@@ -12,12 +12,12 @@ type HamburgerMenuProps = {
  *
  * @component
  * @example
- * <HamburgerMenu controls={"menu-appbar"} onClick={handleMenuOpen} />
+ * <Menu controls={"menu-appbar"} onClick={handleMenuOpen} />
  *
  * @param controls - The id of the menu element that this button controls.
  * @param onClick - Optional click handler for the button.
  */
-export default function HamburgerMenu({controls, onClick}: HamburgerMenuProps) {
+export default function Menu({controls, onClick}: MenuProps) {
     return (
         <IconButton
             aria-label={"open navbar menu"}
@@ -25,7 +25,7 @@ export default function HamburgerMenu({controls, onClick}: HamburgerMenuProps) {
             aria-haspopup={"true"}
             onClick={onClick}
         >
-            <MenuIcon data-testid={"hamburgerMenu-icon"} className={styles.icon}/>
+            <MenuIcon data-testid={"menu-icon"} className={styles.icon}/>
         </IconButton>
     );
 }
