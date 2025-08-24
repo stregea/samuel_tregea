@@ -1,70 +1,80 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
 import GitHub from "@/components/utils/Icons/GitHub/GitHub";
 import LinkedIn from "@/components/utils/Icons/LinkedIn/LinkedIn";
 import Email from "@/components/utils/Icons/Email/Email";
 import Slide from "@mui/material/Slide";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import NavLink from "@/components/Navbar/NavLink/NavLink";
+import MobileMenu from "@/components/MobileMenu/MobileMenu";
 
 type NavbarProps = {
     window?: () => Window;
 };
 
 /**
- * Navbar component that provides navigation links and social media icons.
- * It hides on scroll down and reappears on scroll up.
+ * Navbar component that displays navigation links and social media icons.
+ * It hides on scroll down and shows on scroll up using Material-UI's Slide and useScrollTrigger.
+ *
+ * Reference: https://mui.com/material-ui/react-app-bar/#hide-app-bar
  *
  * @component
  * @example
  * <Navbar />
  *
- * @param props - `window` (optional): a function that returns the global `Window` object, used for scroll trigger calculations.
- * @returns {JSX.Element} The rendered Navbar component.
+ * @param window - Optional window function for server-side rendering.
  */
-export default function Navbar({ window }: NavbarProps) {
+export default function Navbar({window}: NavbarProps) {
 
-    // Use the useScrollTrigger hook to determine when to show or hide the Navbar based on scroll position.
+    // Trigger to hide/show the navbar on scroll.
     const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
+        target: window ? window() : undefined
     });
 
-    /**
-     * Scrolls the page to the specified element with a smooth animation.
-     */
+    // Function to scroll to a specific section within the page.
     const scrollIntoView = (id: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
         event.preventDefault();
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "auto" });
+            element.scrollIntoView({behavior: "auto"});
         }
     };
-    // todo: make hamburger menu on mobile devices
+
+    const sections = [
+        {id: "aboutMe", text: "About"},
+        {id: "experience", text: "Experience"},
+        {id: "projects", text: "Projects"},
+    ];
+
     return (
-        <Slide appear={false} direction="right" in={!trigger}>
-            <AppBar sx={{backgroundColor: 'var(--background)'}}>
+        <Slide direction="down" in={!trigger}>
+            <AppBar sx={{backgroundColor: "var(--background)"}}>
                 <Toolbar sx={{justifyContent: "space-between"}}>
-                    <div style={{display: "flex", gap: "1rem"}}>
-                        <NavLink
-                            sectionId="aboutMe"
-                            text={"About"}
-                            onClick={scrollIntoView("aboutMe")}/>
-                        <NavLink
-                            sectionId="experience"
-                            text={"Experience"}
-                            onClick={scrollIntoView("experience")}/>
-                        <NavLink
-                            sectionId="projects"
-                            text={"Projects"}
-                            onClick={scrollIntoView("projects")}/>
-                    </div>
-                    <div>
-                        <LinkedIn url={"https://www.linkedin.com/in/samueltregea/"}/>
-                        <GitHub url={"https://www.github.com/stregea"}/>
-                        <Email email={"sdtregea@gmail.com"}/>
-                    </div>
+
+                    {/* Hamburger menu for mobile view. */}
+                    <MobileMenu sections={sections} scrollIntoView={scrollIntoView} navbarVisible={!trigger} />
+
+                    {/* Navbar links for desktop. */}
+                    <Box sx={{display: {xs: "none", md: "flex"}, gap: "1rem", padding: "8px"}}>
+                        {sections.map((section) => (
+                            <NavLink
+                                key={section.id}
+                                sectionId={section.id}
+                                text={section.text}
+                                onClick={scrollIntoView(section.id)}
+                            />
+                        ))}
+                    </Box>
+
+                    {/* Social media icons. */}
+                    <Box>
+                        <LinkedIn url="https://www.linkedin.com/in/samueltregea/"/>
+                        <GitHub url="https://www.github.com/stregea"/>
+                        <Email email="sdtregea@gmail.com"/>
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Slide>
     );
-};
+}
