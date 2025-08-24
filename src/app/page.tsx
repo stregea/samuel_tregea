@@ -4,6 +4,7 @@ import Whoami from "@/components/Whoami/Whoami";
 import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
+import Navbar from "@/components/Navbar/Navbar";
 
 /**
  * Home component serves as the main entry point for the application.
@@ -14,15 +15,14 @@ export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                {/* todo: navbar */}
+                <Navbar/>
                 <div className={styles.content}>
                     <Whoami/>
                     <About/>
                     <Experience/>
                     <Projects/>
-                    {/* todo: copyright */}
                 </div>
-                {/* todo: footer */}
+                {/* todo: copyright */}
             </main>
         </div>
     );
