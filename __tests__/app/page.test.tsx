@@ -12,4 +12,6 @@ test('Renders the Home component', () => {
     expect(screen.getByTestId("whoami")).toBeDefined();
     expect(screen.getByTestId("aboutMe")).toBeDefined();
     expect(screen.getByTestId("experience")).toBeDefined();
+    expect(screen.getByTestId("projects")).toBeDefined();
+    expect(screen.getByTestId("copyright")).toBeDefined();
 });
