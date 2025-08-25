@@ -19,9 +19,9 @@ describe("Email Icon", () => {
     });
 
     /**
-     * Test to verify the rendering of the Document component.
+     * Test to verify the rendering of the Email component.
      */
-    test("the rendering of the Document icon.", () => {
+    test("the rendering of the Email icon.", () => {
         const button = screen.getByTestId("email-button");
         const icon = screen.getByTestId("email-icon");
 
