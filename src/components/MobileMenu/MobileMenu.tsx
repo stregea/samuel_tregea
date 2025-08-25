@@ -87,6 +87,7 @@ export default function MobileMenu({sections, scrollIntoView, navbarVisible}: Me
                         onClick={menuItemClick(section.id)}
                         component={"a"}
                         href={`#${section.id}`}
+                        data-testid={`menu-item-${section.id}`}
                     >
                         {section.text}
                     </MenuItem>
