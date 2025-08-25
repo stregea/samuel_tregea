@@ -52,13 +52,13 @@ export default function MobileMenu({sections, scrollIntoView, navbarVisible}: Me
     }, [navbarVisible]);
 
     return (
-        <Box sx={{flexGrow: 0, display: {xs: "flex", md: "none" }}} data-testid={"mobileMenu"}>
+        <Box sx={{flexGrow: 0, display: {xs: "flex", md: "none"}}} data-testid={"mobileMenu"}>
             <MenuIcon controls={"menu-appbar"} onClick={openMenu}/>
             <Menu
                 id="menu-appbar"
                 anchorEl={anchorElement}
                 anchorOrigin={{
-                    vertical: "bottom",
+                    vertical: "top",
                     horizontal: "left",
                 }}
                 keepMounted
