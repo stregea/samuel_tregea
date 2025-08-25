@@ -6,6 +6,8 @@
 	--blue-background: #101c31;
 	--blue-background-light: #21314d;
 	--slate: #959caa;
+	--slate-light: #d3d7e3;
+
 }
 
 html,
@@ -22,7 +24,7 @@ html {
 body {
 	color: var(--foreground);
 	background: var(--background);
-	font-family: 'roboto';
+	font-family: 'roboto', 'arial', 'sans-serif';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -39,6 +41,7 @@ body {
 		--background: var(--blue-background);
 		--foreground: #ededed;
 		--card: var(--blue-background-light);
+		--slate-light: rgba(255, 255, 255, 0.18);
 	}
 
 	html {
