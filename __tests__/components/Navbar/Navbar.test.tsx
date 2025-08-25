@@ -2,6 +2,11 @@ import {describe, test, expect, afterEach, vi} from "vitest";
 import {render, screen, cleanup, fireEvent} from "@testing-library/react";
 import Navbar from "@/components/Navbar/Navbar";
 
+/**
+ * Test suite for the Navbar component
+ *
+ * These tests validate rendering, interaction with navigation links, and behavior with a mocked window object.
+ */
 describe("Navbar", () => {
 
     afterEach(() => {
