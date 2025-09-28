@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'Samuel Tregea',
         description:
             'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
-        url: 'https://www.samueltregea.com', // update to your live domain
+        url: 'https://www.samueltregea.com',
         siteName: 'Samuel Tregea',
         images: [
             {
