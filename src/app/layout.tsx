@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Samuel Tregea',
-        description: 'Frontend Developer Portfolio',
+        description: 'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
         images: ['/og-image.jpeg'],
     }
 };
