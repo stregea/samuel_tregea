@@ -11,6 +11,7 @@ import {Analytics} from "@vercel/analytics/next";
  * Metadata for the application.
  */
 export const metadata: Metadata = {
+    metadataBase: new URL('https://www.samueltregea.com'),
     title: {
         default: 'Samuel Tregea',
         template: '%s | Samuel Tregea',
@@ -21,24 +22,18 @@ export const metadata: Metadata = {
         title: 'Samuel Tregea',
         description:
             'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
-        url: 'https://www.samueltregea.com', // update to your live domain
+        url: 'https://www.samueltregea.com',
         siteName: 'Samuel Tregea',
         images: [
             {
                 url: '/og-image.jpeg',
                 width: 1200,
                 height: 630,
-                alt: 'Samuel Tregea Portfolio',
+                alt: 'Samuel Tregea\'s Portfolio',
             },
         ],
         locale: 'en_US',
         type: 'website',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Samuel Tregea',
-        description: 'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
-        images: ['/og-image.jpeg'],
     }
 };
 
