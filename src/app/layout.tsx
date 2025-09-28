@@ -11,7 +11,7 @@ import {Analytics} from "@vercel/analytics/next";
  * Metadata for the application.
  */
 export const metadata: Metadata = {
-    // metadataBase: new URL('https://www.samueltregea.com'),
+    metadataBase: new URL('https://www.samueltregea.com'),
     title: {
         default: 'Samuel Tregea',
         template: '%s | Samuel Tregea',
