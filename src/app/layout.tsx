@@ -11,8 +11,35 @@ import {Analytics} from "@vercel/analytics/next";
  * Metadata for the application.
  */
 export const metadata: Metadata = {
-    title: "Samuel Tregea",
-    description: "Welcome to my personal website",
+    title: {
+        default: 'Samuel Tregea',
+        template: '%s | Samuel Tregea',
+    },
+    description:
+        'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
+    openGraph: {
+        title: 'Samuel Tregea',
+        description:
+            'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
+        url: 'https://www.samueltregea.com', // update to your live domain
+        siteName: 'Samuel Tregea',
+        images: [
+            {
+                url: '/og-image.jpeg',
+                width: 1200,
+                height: 630,
+                alt: 'Samuel Tregea Portfolio',
+            },
+        ],
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Samuel Tregea',
+        description: 'Portfolio of Samuel Tregea – A Software Engineer specializing in fullstack development using Java, Spring Boot, Python, React, Next.js, TypeScript, and Angular.',
+        images: ['/og-image.jpeg'],
+    }
 };
 
 /**
@@ -24,14 +51,14 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        </head>
-        <body>
-        {children}
-        <SpeedInsights/>
-        <Analytics/>
-        </body>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            </head>
+            <body>
+                {children}
+                <SpeedInsights/>
+                <Analytics/>
+            </body>
         </html>
     );
 };
