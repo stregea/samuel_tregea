@@ -6,8 +6,9 @@
       "title": "Software Engineer",
       "duration": "Jan 2022 - Present",
       "description": [
+        "Developed an AI-powered internal test generation tool that transforms JIRA user stories into Zephyr test cases, significantly reducing manual test authoring and accelerating sprint QA readiness.",
         "Lead development on a microservice which was leveraged in generating over $4 million in revenue through Secure Act 2.0 enhancements.",
-        "Leads team in designing testing strategies for user stories in biweekly sprints, ensuring quality outcomes.",
+        "Experienced in designing testing strategies for user stories in biweekly sprints, ensuring quality outcomes.",
         "Develops RESTful microservices using Java Spring for scalable, efficient system architecture.",
         "Builds responsive front-end applications for Paychex Flex® using both React and Angular frameworks.",
         "Collaborates cross-functionally with business partners to deliver innovative, secure, and architecture-aligned software solutions."
