@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "title": "Simulation Service",
+      "description": "(In Progress) A Spring Boot microservice that simulates live sporting events across multiple sports by managing concurrent game state, generating realistic game events, tracking match progression and scoring, and publishing real-time event streams to Kafka using a modular, extensible architecture.",
+      "sourceCode": "https://github.com/stregea/streaming_simulation_service",
+      "languages": [
+        "Java"
+      ],
+      "category": "Personal"
+    },
+    {
       "title": "My Website",
       "description": "The source code to this very website!",
       "sourceCode": "https://github.com/stregea/samuel_tregea",
