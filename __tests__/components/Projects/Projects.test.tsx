@@ -49,7 +49,7 @@ describe("Projects", () => {
      */
     test("renders the Projects component in mobile view", () => {
         // Mock the mobile view
-        (useMediaQuery as any).mockReturnValue(true);
+        (useMediaQuery as ReturnType<typeof vi.fn>).mockReturnValue(true);
 
         render(<Projects/>);
 

@@ -12,19 +12,28 @@ import FadeIn from "@/components/utils/FadeIn/FadeIn";
 describe("FadeIn", () => {
     const unobserve = vi.fn();
     const observe = vi.fn();
+    const disconnect = vi.fn();
 
-    // Mock IntersectionObserver before each test
+    /**
+     * Mock IntersectionObserver before each test.
+     *
+     * The browser environment used by Vitest does not provide a native
+     * IntersectionObserver implementation, so this mock allows the FadeIn
+     * component to observe elements during testing.
+     */
     beforeEach(() => {
+        vi.clearAllMocks();
+
         window.IntersectionObserver = vi.fn((callback, options) => ({
             observe,
             unobserve,
-            disconnect: vi.fn(),
-            takeRecords: vi.fn(),
-            root: options?.root,
-            rootMargin: options?.rootMargin,
-            thresholds: options?.threshold,
-            callback,
-        }));
+            disconnect,
+            takeRecords: vi.fn(() => []),
+            root: options?.root ?? null,
+            rootMargin: options?.rootMargin ?? "",
+            scrollMargin: "",
+            thresholds: [],
+        })) as unknown as typeof IntersectionObserver;
     });
 
     afterEach(() => {
@@ -49,7 +58,8 @@ describe("FadeIn", () => {
     });
 
     /**
-     * Test to ensure FadeIn component renders when it's within the viewport.
+     * Test to ensure FadeIn component becomes visible when it enters the viewport
+     * and stops observing the element after visibility is triggered.
      */
     test("the visibility of the FadeIn component when within view and unobserves.", () => {
         const {getByTestId, unmount} = render(
@@ -58,18 +68,30 @@ describe("FadeIn", () => {
             </FadeIn>
         );
 
-        // Simulate the IntersectionObserver callback being called
+        // Retrieve the element being observed by IntersectionObserver
         const element = getByTestId("testElement");
-        const callback = (window.IntersectionObserver as any).mock.calls[0][0];
-        const entry = {isIntersecting: true, target: element};
 
-        // Call the callback with the entry
+        // Retrieve the IntersectionObserver callback from the mock
+        const intersectionObserverMock =
+            window.IntersectionObserver as unknown as vi.Mock;
+
+        const callback = intersectionObserverMock.mock.calls[0][0];
+
+        // Simulate the element entering the viewport
+        const entry = {
+            isIntersecting: true,
+            target: element,
+        };
+
+        // Call the IntersectionObserver callback with the simulated entry
         callback([entry]);
 
         expect(window.IntersectionObserver).toHaveBeenCalled();
 
-        // unmount the component
+        // Unmount the component to trigger cleanup
         unmount();
-        expect(unobserve).toHaveBeenCalledWith(entry.target);
+
+        // Ensure the observer stops observing the element
+        expect(unobserve).toHaveBeenCalledWith(element);
     });
 });

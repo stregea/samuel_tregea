@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "title": "Simulation Service",
+      "description": "(In Progress) Spring Boot service that simulates live sporting events and streams them through Kafka.",
+      "sourceCode": "https://github.com/stregea/streaming_simulation_service",
+      "languages": [
+        "Java"
+      ],
+      "category": "Personal"
+    },
+    {
       "title": "My Website",
       "description": "The source code to this very website!",
       "sourceCode": "https://github.com/stregea/samuel_tregea",

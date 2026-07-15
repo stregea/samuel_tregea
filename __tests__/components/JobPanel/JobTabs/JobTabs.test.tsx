@@ -54,7 +54,7 @@ describe("JobTabs", () => {
     test("the horizontal rendering of the tabs.", () => {
         // Mock the mobile view
         cleanup();
-        (useMediaQuery as any).mockReturnValue(true);
+        (useMediaQuery as ReturnType<typeof vi.fn>).mockReturnValue(true);
         render(
             <JobTabs
                 career={careerData.career}
