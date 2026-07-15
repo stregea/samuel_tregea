@@ -43,7 +43,7 @@ describe("JobPanel", () => {
     test("the mobile rendering of the JobPanel component.", () => {
         // Mock the mobile view
         cleanup();
-        (useMediaQuery as any).mockReturnValue(true);
+        (useMediaQuery as ReturnType<typeof vi.fn>).mockReturnValue(true);
         render(<JobPanel/>);
 
         // Verify the tabs are rendered in a horizontal layout.
